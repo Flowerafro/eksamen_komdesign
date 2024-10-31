@@ -1,0 +1,408 @@
+:root {
+    --responsive-width: min(96%, 1400px);
+
+    --100vh: 100vh;
+    --50vh: 50vh;
+
+    --dark-green: #2E8B57;
+    --light-green: #98FB98;
+    --brown: #8B4513;
+    --beige: #F5F5DC;
+    --dark-red: #8B0000;
+    --cream: #FFFDD0;
+    --dark-gray-green: #2F4F4F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overscroll-behavior: none;
+    background-color: #000;
+    color: var(--cream);
+}
+
+/* ------------ FLEX RULES ----------- */
+
+.flex-row-jus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-col-jus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-col-al {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-col-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-center {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.flex-start-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.flex-space-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row-center-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-al-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-row-wrap-start {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*********************************************
+ *   MOBILE Styling
+ *********************************************/
+/* ------------- INTRO Background image  ----------- */
+
+#wrap-mushroom-path {
+    background-image: url(IMG/aviewforest.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -------------INTRO text boxes ----------- */
+#intro {
+    width: var(--responsive-width);
+    height: var(--100vh);
+    padding: 0;
+}
+
+#intro h1 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 1rem;
+    width: 80%;
+} 
+
+hr {
+    border: 1px solid var(--dark-gray-green);
+    margin: 1rem 0;
+}
+
+#intro span {
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: 0;
+}
+
+#intro-textbox {
+    width: var(--responsive-width);
+    height: auto;
+}
+
+.intro-text-div {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-text {
+    width: 90%;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 3rem;
+    font-weight: bold; 
+    padding: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ------------- png breaks - overgang fra parallax til text bokser ----------- */
+
+#forest-break {
+    background-image: url(IMG/tree-silouette.png);
+    background-attachment: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 600px;
+    margin-bottom: -1rem;
+}
+    
+/* ---------- Section: mushroom info -------------- */
+
+.info-section {
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-gray-green);
+}
+
+#mushroom-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: var(--responsive-width);
+    height: auto;
+    padding: 2rem;
+}
+
+/* Artikkelkort om hver sopp */
+.mushroom-card {
+    border: 1px solid var(--light-green);
+    padding: 1rem;
+    margin: 0;
+    max-width: 350px;
+    min-height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    background-color: var(--cream);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mushroom-card img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.mushroom-card h3 {
+    font-size: 25px;
+    color: var(--dark-green);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mushroom-card h4 {
+    font-size: 22px;
+    color: var(--dark-gray-green);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid var(--dark-gray-green);
+}
+
+.mushroom-card p {
+    font-size: 17px;
+    font-family: 'arial';
+    color: var(--dark-red);
+    text-align: left;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+/* ------------  ARTICLE SECTION  ----------- */
+
+#article {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+
+    background-image: url(IMG/blackmushrooms.jpg);
+    background-attachment: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.article {
+    width: var(--responsive-width);
+    margin: 1rem auto;
+    padding: 2rem;
+    background-color: var(--dark-gray-green);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 2.5rem;
+    color: var(--cream);
+}
+
+.article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--light-green);
+}
+
+.article h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-green);
+}
+
+.article p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.article ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.article ul li {
+    margin-bottom: 0.5rem;
+}
+
+.article strong {
+    font-weight: bold;
+}
+
+
+/*********************************************
+ *  iPad Styling (min-width: 768px)
+ *********************************************/
+
+
+@media (min-width: 768px) {
+    
+}
+
+/*********************************************
+ *  Desktop Styling (min-width: 1000px)
+ *********************************************/
+@media (min-width: 1000px) {
+    #intro {
+        width: var(--responsive-width);
+        height: var(--100vh);
+        padding: 0 5rem;
+    }
+    #intro h1 {
+        font-size: 35px;
+        width: 70%;
+    } 
+    #intro span {
+        font-size: 65px;
+    }
+    .intro-text-div {
+        text-align: center;
+    }
+    .intro-text {
+        width: 60%;
+        font-size: 30px;
+        padding: 2rem;
+    }
+
+    #forest-break {
+        height: 700px;
+        margin-bottom: -1rem;
+    }
+
+    /* ---------- Section: mushroom info -------------- */
+
+    #mushroom-info {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+
+    .mushroom-card {
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mushroom-card img {
+        width: 200px;
+        height: auto;
+    }
+
+    .mushroom-card:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    .mushroom-card h3 {
+        font-size: 30px;
+        margin: 1rem;
+    }
+    
+    .mushroom-card h4 {
+        font-size: 25px;
+    }
+    
+    .mushroom-card p {
+        font-size: 20px;
+        font-family: 'arial';
+        color: var(--dark-red);
+        text-align: left;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    /* ------------  ARTICLE SECTION  ----------- */
+
+    #article {
+        padding: 4rem;
+    }
+
+    .article {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 3rem;
+        line-height: 3rem;
+    }
+}
