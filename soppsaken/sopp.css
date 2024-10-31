@@ -33,6 +33,23 @@ body {
     color: var(--cream);
 }
 
+/* ------------ logo ----------- */
+header {
+    background-color: transparent;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    background: var(--dark-green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    z-index: 100;
+
+    margin-right: 1rem;
+    padding: 1rem;
+}
 /* ------------ FLEX RULES ----------- */
 
 .flex-row-jus {
