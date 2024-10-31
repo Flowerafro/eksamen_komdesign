@@ -42,7 +42,7 @@ header {
     background-color: transparent;
 }
 
-#logo {
+.logo {
     font-size: 1.2em;
     margin-right: 1rem;
     padding: 0.5rem 1rem;
@@ -53,6 +53,16 @@ header {
     position: absolute;
     top: 0;
     left: 0; 
+
+    display: inline-flex;
+    align-items: center;
+    background: #459677;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+
+    margin-right: 1rem;
+    padding: 0 1rem;
 }
 
 /************* PARALLAX ***********/

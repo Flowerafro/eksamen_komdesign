@@ -29,7 +29,7 @@ header {
     line-height: 3.75rem
 }
 
-header a {
+.logo {
     display: inline-flex;
     align-items: center;
     background: #459677;
