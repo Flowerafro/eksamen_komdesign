@@ -1,0 +1,28 @@
+:root {
+    /*motorsykkel*/
+    /*mobil-debatten*/
+    --white: #fff;
+    --white-opacity: rgba(255, 255, 255, 0.8);
+    --black: #000;
+    --black-opacity: rgba(0, 0, 0, 0.8);
+    --green: #459677;
+    --grey: #39454b;
+    --grey-green: #A3C1AD;
+    --light-yellow: #f4f0dc;
+
+    /*sopp-saken*/
+    --responsive-width: min(96%, 1400px);
+
+    --100vh: 100vh;
+    --50vh: 50vh;
+
+    --dark-green: #2E8B57;
+    --light-green: #98FB98;
+    --brown: #8B4513;
+    --beige: #F5F5DC;
+    --dark-red: #8B0000;
+    --cream: #FFFDD0;
+    --dark-gray-green: #2F4F4F;
+
+    /*XL*/
+}

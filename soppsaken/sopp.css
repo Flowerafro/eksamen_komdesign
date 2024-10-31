@@ -285,6 +285,7 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
 
+    position: relative;
 }
 
 .article {
@@ -328,6 +329,28 @@ hr {
 
 .article strong {
     font-weight: bold;
+}
+
+.btn-top {
+
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+    margin: 1rem;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    background-color: var(--dark-red);
+    color: var(--cream);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 
