@@ -1,0 +1,703 @@
+/*********************************************************************************/
+/*                                      XL - story                               */
+/*********************************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /*COLOR*/
+    --black: #000;
+    --black-opacity: rgba(0, 0, 0, 0.5);
+    --white: #fff;
+    --red: #ff0000;
+    --red-opacity: rgba(255, 0, 0, 0.5);
+    --green: #A7C399;
+    --dark-grey: #2a272a;
+    --grey-purple: #4b4a54;
+
+    /*FONT*/
+
+    --font-family: 'poppins', sans-serif;
+    --font-family-small: 'Open Sans', sans-serif;
+    --font-size-headline: clamp(32px, calc((36 / 580) * 100vw), 45px); /* min, preferred, max */
+    --font-size-text: clamp(21px, calc((26 / 580) * 100vw), 30px);
+    --font-size-headline-700: clamp(32px, calc((36 / 700) * 100vw), 45px); /* min, preferred, max for iPad */
+    --font-size-text-700: clamp(21px, calc((26 / 700) * 100vw), 30px);
+    --font-size-headline-1200: clamp(32px, calc((36 / 1200) * 100vw), 45px); /* min, preferred, max for desktop */
+    --font-size-text-1200: clamp(21px, calc((26 / 1200) * 100vw), 30px); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family);
+}
+
+figcaption, p, a {
+    font-family: var(--font-family-small);
+}
+
+header {
+    width: 100%;
+    padding: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    display: inline-flex;
+    align-items: center;
+    background: #459677;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+#headlines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+}
+
+.headline {
+    /* background-color: var(--black-opacity); */
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    color: var(--white);
+    text-align: left;
+    letter-spacing: 1px;
+    position: relative;
+    width: 60%;
+    margin: 50vh auto; /* mellomrom mellom headlines*/
+}
+
+.headline h1 {
+    font-size: var(--font-size-headline);
+    font-weight: 400;
+}
+
+.headline p {
+    font-size: var(--font-size-text);
+}
+
+/* Video Parallax Section*/
+.parallaxVideo {
+    width: 100%;
+    max-width: 500px;
+  height: auto;
+  max-height: 250vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.parallaxVideo video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+
+  /* max-width: 500px;  media-query mobil - i desktop må være større */
+
+  
+}
+
+/********************************** INTRO w heart **********************************************/
+
+#intro {
+    width: 100%;
+    height: 120vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem 0;
+
+    z-index: 100;
+}
+
+/**** Hjerte oppe i høyre hjørne *****/
+.heart-center-70px {
+    background-color: var(--red);
+    width: 70px;
+    height: 70px;
+    filter: drop-shadow(0 0 15rem var(--red));
+    border-radius: 50%;
+}
+
+.heart-outer-center-72px {
+    background-color: var(--red-opacity);
+    width: 75px;
+    height: 75px;
+    filter: blur(10px);
+    border-radius: 50%;
+}
+
+#heart-center {
+    animation: pulse 2s infinite;
+}
+
+/**************************************** ARTICLE ******************************************************/
+
+.article {
+    width: 100%;
+    height: auto; /* blir auto når teksten er på plass */
+    background-color: var(--black);
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem 0;
+}
+
+.article-div {
+    width: 70%;
+    max-width: 500px;
+    padding: 1rem;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 2% 1fr 2%;
+    row-template-rows: 1fr;
+    margin-top: clamp(70px, calc((70 / 580)* 100vw), 100px);
+    margin-bottom: clamp(70px, calc((70 / 580)* 100vw), 100px);
+    padding: 1rem;
+}
+
+figure figcaption {
+    grid-column: 2/3;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+figure img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    grid-column: 2/3;
+}
+
+/************************************************ MAP *******************************************************/
+
+.map-section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    position: relative; 
+}
+
+#map {
+    height: 90%;
+}
+
+#start-animation {
+    border: none;
+    border-radius: 4px;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem;
+    cursor: pointer;
+
+    position: absolute;
+    top: 5%; 
+    left: 5%; 
+    z-index: 10;
+}
+
+/* Marker style */
+.marker {
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 5px;
+    max-width: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: all 1s ease;
+}
+
+.popup-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #333;
+    text-wrap: wrap;
+}
+
+.popup-content button {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content .more-info {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+}
+
+.popup-content .more-info p {
+    margin: 0;
+    font-size: 11px;
+    color: #666;
+}
+
+.popup-content .more-info.show {
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1;
+    overflow: scroll;
+}
+
+.maplibregl-popup-close-button {
+    padding: 5px;
+    font-size: 20px;
+}
+/**************************************** VIDEO in article ******************************************************/
+
+.video-div {
+    width: 100%;
+    height: auto;
+    background-color: var(--black);
+    color: var(--white);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-text {
+    width: 70%;
+    padding: 1rem;
+    position: absolute;
+    background-color: var(--black-opacity);
+}
+
+.video-div video {
+    max-width: 400px;
+}
+
+/************************************** Image timeline ******************************************************/
+
+.timeline {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--black);
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+}
+
+.timeline .images img {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.timeline .images img.active {
+    display: block;
+    transition: all 1s ease;
+}
+
+.buttons{
+    position: absolute;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 100%;
+}
+
+.buttons button {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0.5rem;
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*******************************************************************************************************/
+/*                                             KEYFRAMES                                               */
+/*******************************************************************************************************/
+
+/*************************************** HEART PULSE **********************************************/
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    40% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+/*************************************** gradient keyframe **********************************************/
+
+@keyframes hero-gradient-animation {
+    0% {
+        --c-0: hsla(232.5, 0%, 0%, 1);
+        --x-0: 91%;
+        --y-0: 90%;
+        --s-start-0: 1%;
+        --s-end-0: 61%;
+        --s-start-1: 0%;
+        --s-end-1: 55%;
+        --y-1: 24%;
+        --x-1: 17%;
+        --c-1: hsla(75, 0%, 0%, 1);
+        --s-start-2: 19%;
+        --s-end-2: 54%;
+        --y-2: 32%;
+        --x-2: 11%;
+        --c-2: hsla(232.5, 25%, 12%, 1);
+        --y-3: 31%;
+        --s-start-3: 0%;
+        --s-end-3: 67%;
+        --x-3: 2%;
+        --c-3:  hsla(240, 100%, 10%, 1);
+        --c-4: hsla(349, 0%, 0%, 1);
+        --x-4: 74%;
+        --y-4: 93%;
+        --s-start-4: 12%;
+        --s-end-4: 82%;
+    }
+
+    100% {
+        --c-0:  hsla(240, 100%, 10%, 1);
+        --x-0: 49%;
+        --y-0: 25%;
+        --s-start-0: 19%;
+        --s-end-0: 69%;
+        --s-start-1: 3%;
+        --s-end-1: 77%;
+        --y-1: 41%;
+        --x-1: 1%;
+        --c-1:hsla(240, 100%, 20%, 1);
+        --s-start-2: 6%;
+        --s-end-2: 73%;
+        --y-2: 93%;
+        --x-2: 44%;
+        --c-2: hsla(321, 0%, 0%, 1);
+        --y-3: 51%;
+        --s-start-3: 8%;
+        --s-end-3: 86%;
+        --x-3: 97%;
+        --c-3: hsla(0, 0%, 0%, 1); 
+        --c-4: hsla(232.5, 19%, 16%, 1);
+        --x-4: 10%;
+        --y-4: 69%;
+        --s-start-4: 20%;
+        --s-end-4: 75%;
+    }
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(232.5, 0%, 0%, 1)
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 91%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 90%
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 1%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 61%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 55%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 24%
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 17%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(75, 0%, 0%, 1)
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 19%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 54%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 32%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 11%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(232.5, 25%, 12%, 1)
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 31%
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 67%
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value:  hsla(240, 100%, 10%, 1);
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(349, 0%, 0%, 1)
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 74%
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 93%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 12%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 82%
+}
+
+.black-gradient {
+    --c-0: hsla(232.5, 0%, 0%, 1);
+    --x-0: 91%;
+    --y-0: 90%;
+    --y-1: 24%;
+    --x-1: 17%;
+    --c-1: hsla(75, 0%, 0%, 1);
+    --y-2: 32%;
+    --x-2: 11%;
+    --c-2: hsla(232.5, 25%, 12%, 1);
+    --y-3: 31%;
+    --x-3: 2%;
+    --c-3:  hsla(240, 100%, 10%, 1);
+    --c-4: hsla(349, 0%, 0%, 1);
+    --x-4: 74%;
+    --y-4: 93%;
+    ;
+    background-color: hsla(232.5, 0%, 0%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
+    animation: hero-gradient-animation 10s linear infinite alternate;
+    background-blend-mode: normal, normal, normal, normal, normal;
+}
+
+/*************************************** ANIMATION TEXT **********************************************/
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+/*********************************************************************************************************/
+/*                                             MEDIA QUERIES                                             */
+/*********************************************************************************************************/
+
+@media screen and (min-width: 768px) {
+
+.headline {
+    text-align: center;
+}
+  
+.timeline .images img {
+    max-width: 800px;
+}
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .parallaxVideo {
+        width: 100%;
+    }
+
+    .video-text {
+        width: 20%;
+    }
+   
+}

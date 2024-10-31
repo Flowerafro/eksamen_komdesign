@@ -445,4 +445,10 @@ hr {
         padding: 3rem;
         line-height: 3rem;
     }
+
+    .btn-top:hover {
+        background-color: var(--brown);
+        transform: translateY(-15px);
+        transition: 0.5s;
+    }
 }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>XL-story</title>
+    <link rel="stylesheet" href="XL.css">
+    <link rel="icon" href="IMG/amkbil.png" type="image/x-icon" />
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="black-gradient">
+    <header>
+        <a href="/landingsside/index.html" class="logo">DB</a>
+    </header>
+
+    <div class="parallaxVideo">
+        <video autoplay muted loop>
+            <source src="IMG/amk.mov" type="video/mp4" />
+        </video>
+    </div>
+
+    <section id="headlines">
+        <div class="headline">
+            <h1 class="text-focus-in">Hovedtittel</h1>
+        </div>
+        <div class="headline">
+            <p>"Første sitat som oppsummerer saken"</p>
+        </div>
+        <div class="headline">
+            <p>".. et sitat som fanger inn leseren og som hinter om pulserende rød sirkel som dukker opp rett under?"
+            </p>
+        </div>
+    </section>
+
+    <div>
+        <!-- Innledning md dramatiske fakta om sentralisering-->
+    </div>
+
+    <div id="intro" class="black-gradient">
+        <div id="heart-center" class="heart-outer-center-72px">
+            <div id="heart" class="heart-center-70px"></div>
+        </div>
+    </div>
+
+    <article id="article-1" class="article">
+        <div class="article-div">
+            <h2> Kort introtekst om temaet sentralisering</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                soluta quod ab nulla ullam inventore ducimus modi repudiandae autem laboriosam?</p>
+        </div>
+        <figure>
+            <img src="IMG/tonje.jpeg" alt="bilde av Tonje">
+            <figcaption>FOTO: privat </figcaption>
+        </figure>
+        <div class="article-div">
+            <h2>presentasjon av Tonje</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, veritatis placeat natus iure ex ut
+                quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, nostrum impedit nesciunt excepturi
+                tempora illum officia omnis reprehenderit quibusdam magnam!</p>
+        </div>
+        <div class="article-div">
+            <p>innledning til situasjonen som er tilknyttet kartet</p>
+        </div>
+
+    </article>
+
+    <div class="map-section">
+        <button id="start-animation">Se distansen AMK fra Ås må kjøre</button>
+
+        <div id="map"></div>
+    </div>
+
+    <article id="article-2" class="article">
+        <div class="article-div">
+            <h2>ny historie Hanne sykepleier</h2>
+            <p>Baby og helikopter - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                soluta quod ab nulla ullam inventore ducimus modi repudiandae autem laboriosam?</p>
+        </div>
+        <figure>
+            <img src="IMG/hanne.jpg" alt="bilde av Hanne">
+            <figcaption>FOTO: privat </figcaption>
+        </figure>
+
+        <div class="article-div">
+            <p> Kort introtekst om temaet sentralisering , Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, veritatis placeat natus iure ex ut
+                quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos nam nobis at labore aspernatur quia vitae
+                aliquam qui excepturi ad! Eos repellendus asperiores vel repellat, nisi pariatur. Tempore dignissimos
+                eligendi dolores eos iste consectetur ducimus, illo quo nihil modi tenetur?</p>
+        </div>
+    </article>
+
+    <div class="video-div">
+        <div class="video-text">
+            <p>"video tilknyttet babe&helikopter-sak" (riktig video?)</p>
+        </div>
+
+        <video autoplay muted loop>
+            <source src="IMG/amk3.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <article id="article-3" class="article">
+        <div class="article-div">
+            <h2> ny tittel</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                soluta quod ab nulla ullam inventore ducimus modi repudiandae autem laboriosam?</p>
+        </div>
+
+        <div class="article-div">
+            <h2>ny tittel</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, veritatis placeat natus iure ex ut
+                quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sint iusto officia voluptas qui facere fugit
+                itaque totam beatae rem?</p>
+        </div>
+    </article>
+
+    <div class="timeline">
+        <div class="images">
+            <img id="image1" src="https://placehold.co/400x500" alt="Hospitals in 2000" class="active">
+            <img id="image2" src="https://placehold.co/500x500" alt="Hospitals now">
+            <img id="image3" src="https://placehold.co/300x500" alt="Hospitals in the future">
+        </div>
+        <div class="buttons">
+            <button onclick="showImage('image1')">FORTID</button>
+            <button onclick="showImage('image2')">NÅTID</button>
+            <button onclick="showImage('image3')">FREMTID</button>
+        </div>
+    </div>
+
+    <article id="article-3" class="article">
+        <div class="article-div">
+            <h2> ny tittel</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                soluta quod ab nulla ullam inventore ducimus modi repudiandae autem laboriosam?</p>
+        </div>
+
+        <figure>
+            <img src="IMG/amk.jpeg" alt="bilde av amk på ulykkested">
+            <figcaption>FOTO: privat </figcaption>
+        </figure>
+        <div class="article-div">
+            <h2>Konklusjon</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus, veritatis placeat natus iure ex ut
+                quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sint iusto officia voluptas qui facere fugit
+                itaque totam beatae rem?</p>
+        </div>
+    </article>
+
+    <script src="XL.js"></script>
+</body>
+
+</html>

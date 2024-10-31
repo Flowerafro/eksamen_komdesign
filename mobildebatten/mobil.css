@@ -304,6 +304,7 @@ footer {
 
     .btn-top:hover {
         background-color: var(--grey-green);
-        transform: rotate(2deg);
+        transform: translateY(-15px);
+        transition: 0.5s;
     }
 }
