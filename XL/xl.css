@@ -176,6 +176,8 @@ header {
     align-items: center;
 
     padding: 5rem 0;
+
+    position: relative;
 }
 
 .article-div {
@@ -369,6 +371,27 @@ figure img {
 
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-top {
+    position: absolute;
+    bottom: 1rem;
+    right: 0.5rem;
+
+    margin: 1rem;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    background-color: red;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -698,6 +721,12 @@ figure img {
 
     .video-text {
         width: 20%;
+    }
+
+    .btn-top:hover {
+        background-color: green;
+        transform: translateY(-15px);
+        transition: 0.5s;
     }
    
 }
