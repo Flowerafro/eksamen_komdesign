@@ -39,9 +39,9 @@ body {
 }
 
 /* ------------ logo ----------- */
-header {
+/* header {
     background-color: transparent;
-}
+} 
 
 .logo {
     display: inline-flex;
@@ -54,7 +54,7 @@ header {
 
     margin-right: 1rem;
     padding: 1rem;
-}
+}*/
 /* ------------ FLEX RULES ----------- */
 
 .flex-row-jus {

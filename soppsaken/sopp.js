@@ -105,10 +105,10 @@ function generateMushroomElements() {
     // Velger kun elementer med klassen .mushroom etter at de er generert
     const mushrooms = Array.from(mushroomParent.querySelectorAll('.mushroom'));
 
-    // Place mushrooms alternately in the left and right columns
+    // Plasserer soppene i grid, der hver sopp får sin rad og enten kol 1 eller 2
     mushrooms.forEach((mushroom, index) => {
-        const row = index + 1; // Each mushroom gets its own row
-        const col = (index % 2) + 1; // Alternate between column 1 and 2
+        const row = index + 1;
+        const col = (index % 2) + 1;
 
         mushroom.style.gridRow = row;
         mushroom.style.gridColumn = col;

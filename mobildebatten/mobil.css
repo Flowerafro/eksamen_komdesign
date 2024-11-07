@@ -37,7 +37,7 @@ body {
     color: var(--black);
 }
 
-header {
+/* header {
     width: 100%;
     background-color: transparent;
 }
@@ -52,7 +52,7 @@ header {
 
     margin-right: 1rem;
     padding: 1rem;
-}
+} */
 
 /************* PARALLAX ***********/
 

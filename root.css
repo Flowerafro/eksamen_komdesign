@@ -26,3 +26,26 @@
 
     /*XL*/
 }
+
+
+/* ------------  Header all pages  ----------- */
+
+header {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+}
+
+.logo {
+    /* display: inline-flex;
+    align-items: center; */
+    position: absolute;
+    background: #459677;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+
+    margin-right: 1rem;
+    padding: 1rem;
+}
