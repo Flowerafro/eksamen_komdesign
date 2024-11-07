@@ -144,6 +144,7 @@ function getMushroomData(basketContent) {
 }
 
 /* Klikk på soppkurven skal vise: innholdet i kurven og artikkel, feilmeld om kurven er tom, og fjerne spillet (da er spillet over)*/
+/* Klikk på soppkurven skal vise: innholdet i kurven og artikkel, feilmeld om kurven er tom, og fjerne spillet (da er spillet over)*/
 basket.addEventListener('click', () => {
     if (basketContent.length === 0) {
         alert('ops! Ser ut som at du må tilbake til skogs og plukke sopp før vi kan sjekke kurven din!');
@@ -160,7 +161,7 @@ basket.addEventListener('click', () => {
             </div>`;
         }).join('');
 
-        baskettext.classList.remove('flex-row-center-center')
+        baskettext.classList.remove('flex-row-center-center');
         baskettext.classList.add('flex-col-center-center');
 
         /* Fjerner gammel klasse og legger til ny */
@@ -172,6 +173,9 @@ basket.addEventListener('click', () => {
 
         displayScore();
 
+        setTimeout(() => {
+            infoSection.classList.add('show');
+        }, 100); /* delay */
     }
 });
 
@@ -189,7 +193,7 @@ function displayScore() {
     });
     // if else som bestemmer om basket-text skal vise om du kan spise soppen eller ikke
     if (poisonCount > 0) {
-        baskettext.innerHTML = `<p>Du har plukket ${poisonCount} giftige sopp og selv om du plukket ${notPoisonCount} gift-fri sopp, må alt kastet fordi de har vært i samme kurv :(</p>
+        baskettext.innerHTML = `<p>Du har plukket ${poisonCount} giftige sopp. Selv om du plukket ${notPoisonCount} gift-fri sopp, må alt kastet fordi de har vært i samme kurv.</p>
         <button><a href="#info-section">Les mer om soppen du plukket her</a></button>`;
     } else {
         baskettext.innerHTML = `<p>Gratulerer! Du har plukket ${notPoisonCount} gift-fri sopp og kan spise med god samvittighet! Les mer om soppen du har plukket under under</p> 
