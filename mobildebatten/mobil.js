@@ -9,12 +9,19 @@ function isInViewport(el) {
     );
 }
 
-document.addEventListener('scroll', function () {
+document.addEventListener('DOMContentLoaded', function () {
     if (isInViewport(document.getElementById("intro"))) {
-        document.getElementById("background").style.backgroundImage = "url('IMG/19.jpg')";
+        document.getElementById("background").style.backgroundImage = "url('IMG/27.jpg')";
     }
+}, {
+    passive: true
+});
+
+
+document.addEventListener('scroll', function () {
+
     if (isInViewport(document.getElementById("first"))) {
-        document.getElementById("background").style.backgroundImage = "url('IMG/6.jpg')";
+        document.getElementById("background").style.backgroundImage = "url('IMG/26.png')";
     }
     if (isInViewport(document.getElementById("second"))) {
         document.getElementById("background").style.backgroundImage = "url('IMG/3.jpg')";
@@ -28,3 +35,5 @@ document.addEventListener('scroll', function () {
 }, {
     passive: true
 });
+
+
