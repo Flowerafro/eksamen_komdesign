@@ -154,12 +154,11 @@ header {
     margin: 0;
     padding: 1rem;
     width: 80%;
+
+    display: flex;
+    flex-direction: column;
 } 
 
-hr {
-    border: 1px solid var(--dark-gray-green);
-    margin: 1rem 0;
-}
 
 #intro span {
     font-size: 40px;
