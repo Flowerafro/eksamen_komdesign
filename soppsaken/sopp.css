@@ -11,6 +11,11 @@
     --dark-red: #8B0000;
     --cream: #FFFDD0;
     --dark-gray-green: #2F4F4F;
+    --white: #fff;
+    --black: #000;
+
+    --font-size: 16px;
+    --font-size-article: 14px;
 }
 
 * {
@@ -29,8 +34,8 @@ html, body {
 body {
     font-family: 'Roboto', sans-serif;
     overscroll-behavior: none;
-    background-color: #000;
-    color: var(--cream);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /* ------------ logo ----------- */
@@ -123,7 +128,7 @@ header {
 /* ------------- INTRO Background image  ----------- */
 
 #wrap-mushroom-path {
-    background-image: url(IMG/aviewforest.jpg);
+    background-image: url(IMG/BrunSopp1.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,7 +143,7 @@ header {
 }
 
 #intro h1 {
-    font-size: 25px;
+    font-size: 21px;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 1px;
@@ -157,7 +162,7 @@ hr {
 }
 
 #intro span {
-    font-size: 55px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 2px;
@@ -182,7 +187,7 @@ hr {
 
 .intro-text {
     width: 90%;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     letter-spacing: 1px;
     line-height: 3rem;
@@ -314,7 +319,7 @@ hr {
 }
 
 .article p {
-    font-size: 1rem;
+    font-size: var(--font-size-article);
     margin-bottom: 1rem;
 }
 
