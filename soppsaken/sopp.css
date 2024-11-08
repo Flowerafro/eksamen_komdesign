@@ -273,6 +273,11 @@ body {
     color: var(--black);
 }
 
+.article ul h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
 .article ul li {
     margin-bottom: 0.5rem;
 }
