@@ -16,7 +16,7 @@
         <a href="/landing.html" class="logo" id="logo-mobil">DB</a>
     </header>
 
-    <section id="wrap-mushroom-path" class="flex-col-al">
+    <div id="wrap-mushroom-path" class="flex-col-al">
         <section id="intro" class="flex-center-center">
             <h1>En tur ut i skogen kan fort bli
                 <span>giftig</span>
@@ -40,13 +40,14 @@
             </div>
         </section>
 
-        <section id="forest-break" class="flex-col-al">
-        </section>
-    </section>
+        <div class="forest-break flex-col-al">
+        </div>
+    </div>
 
-    <section id="mushroom-path-section" class="flex-col-al">
+    <div id="mushroom-path-section" class="flex-col-al">
         <div class="mushroom-path-intro flex-col-center-center">
-            <p class="mushroom-path-text"><span>Spesielt i år</span>
+            <p class="mushroom-path-text">
+                <span class="path-text-bold">Spesielt i år</span>
                 har både bekymring og informasjon rundt giftig sopp fått dekning
                 i mediene og nasjonale informasjonskanaler som FHI og Helsenorge.
             </p>
@@ -59,10 +60,9 @@
             </p>
 
             <p class="mushroom-path-text">FHI
-                vil minne om at den giftigste soppen i Norge faktisk er svært giftig.</p>
-
-            <p class="mushroom-path-text">I år er det allerede meldt om
-                flere alvorlige soppforgiftninger.</p>
+                vil minne om at den giftigste soppen i Norge faktisk er svært giftig. <br> I år er det allerede <a
+                    href="https://www.fhi.no/nyheter/2024/unnga-soppforgiftning-i-host/" target="_blank">meldt om
+                    flere alvorlige soppforgiftninger (FHI) </a> </p>
 
             <figure>
                 <img src="IMG/data-mob.png" alt="data om henvendelser om mulig soppforgiftinger" id="data-img">
@@ -74,7 +74,9 @@
                 <q>De giftigste soppene
                     vokser stort sett over alt der matsoppen vokser. I granskogen finner vi mest
                     sopp,</q> <br>
-                - sier soppekspert Mia Holm-Olsen fra Halden soppforening.
+                - sier Mia Holm-Olsen, leder for <a href="https://halden.soppognyttevekster.no/" target="_blank">
+                    Halden
+                    soppforening</a>
             </p>
 
             <p class="mushroom-path-text">
@@ -87,38 +89,25 @@
                 plukke) er
                 det viktigste for å unngå forgiftning.</p>
 
-            <!--   <p class="mushroom-path-text">Hennes råd for soppturen lyder som følger:
-                <br>
-                Ingen hvite sopper med hvite skiver og ingen brune sopper med brune
-                skiver. Hvis man
-                unngår det så unngår man hvit fluesopp og giftslørsopp.
-                Plukk kun sopp du er 100% sikker på: Hvis du er i tvil, la soppen stå.
-                Rens soppen både mens du plukker og hjemme: Slik unngår du å få med ubudne
-                gjester av giftige sopp
-                som kan stå sammen med de spiselige.
-
-                <q>Hurtigregel: Ingen hvite sopper med hvite skiver og ingen brune sopper med brune skiver. Hvis man
-                    unngår det så unngår man hvit fluesopp og giftslørsopp.
-                    Plukk kun sopp du er 100% sikker på: Hvis du er i tvil, la soppen stå.
-                    Rens soppen både mens du plukker og hjemme: Slik unngår du å få med ubudne gjester av giftige sopp
-                    som kan stå sammen med de spiselige.</q>
-            </p> -->
-
-
-            <p class="mushroom-path-text"><span>Men du?</span> La oss teste din soppkunnskap. Bli med på sopptur da vel!
+            <span class="game-title">Men du? La oss teste din soppkunnskap.</span><br>
+            <p class="mushroom-path-text">
+                <span class="path-text-bold">Bli
+                    med
+                    på sopptur</span>
+                og plukk kun med deg de spiselige soppene.
+                <br> Unngå å bli forgiftet!
             </p>
-            <p class="mushroom-path-text">Plukk kun med deg de spiselige soppene, og unngå å bli forgiftet!</p>
         </div>
 
-        <section id="mushroom-game" class="flex-col-al">
+        <div id="mushroom-game" class="flex-col-al">
             <div class="counter-box">
                 <p>Ant sopp: <span class="counter">0</span></p>
             </div>
             <div id="mushroom-path">
                 <!-- Her genereres inn sopp fra Js -->
             </div>
-        </section>
-    </section>
+        </div>
+    </div>
 
 
     <section id="basket-section">
@@ -135,16 +124,16 @@
 
     </section>
 
-    <section id="info-section" class="flex-col-al">
+    <div id="info-section" class="flex-col-al">
         <div id="mushroom-info" class="flex-row-center-center"></div>
-        <section id="forest-break" class="flex-col-al">
-        </section>
-    </section>
+        <div class="forest-break flex-col-al">
+        </div>
+    </div>
 
     <section id="article">
         <div class="article">
-            <h1>Farene ved å plukke feil sopp</h1>
-            <h2>Giftige sopper:</h2>
+            <h3>Farene ved å plukke feil sopp</h3>
+            <h4>Giftige sopper:</h4>
             <p>Noen sopper inneholder farlige giftstoffer som kan forårsake alvorlige helseproblemer, inkludert
                 organsvikt
                 og i verste fall død. <strong>Spiss giftslørsopp </strong>er en av de mest giftige soppene i Norge og
@@ -152,7 +141,7 @@
                 med
                 spiselige varianter.</p>
 
-            <h2>Symptomer på Forgiftning</h2>
+            <h4>Symptomer på Forgiftning</h4>
             <p>Symptomer på soppforgiftning kan variere, men inkluderer ofte kvalme, oppkast, magesmerter, diaré, og i
                 alvorlige tilfeller, leverskade. Det er viktig å søke medisinsk hjelp umiddelbart hvis du mistenker at
                 du
@@ -161,7 +150,7 @@
         <div class="article">
             <p>For å unngå farene ved soppforgiftning, følg disse enkle plukkevettreglene:</p>
             <ul>
-                <h3>Plukkevettregler</h3>
+                <li>Plukkevettregler: </li>
                 <li><strong>Lær deg de vanligste giftige soppene:</strong> Bli kjent med de farligste soppene i ditt
                     område.
                     Bruk pålitelige soppbøker eller apper for å identifisere dem.</li>
@@ -174,12 +163,17 @@
                     du
                     tilbereder og spiser den.</li>
             </ul>
-            <p>Ved å følge disse rådene kan du nyte en trygg og hyggelig sopptur i skogen. Husk, det er alltid bedre å
+            <p>Ved å følge disse rådene kan du nyte en trygg og hyggelig sopptur i skogen. <br> Husk, det er alltid
+                bedre å
                 være
                 forsiktig enn å risikere helsen din.</p>
         </div>
-        <a href="#" class="btn-top">TOP</a>
+        <a href="#wrap-mushroom-path" class="btn-top">TOP</a>
     </section>
+
+    <footer>
+        <p>© The Daily Bugle: Moore, Kyrrø, Krokeide & Henriksen</p>
+    </footer>
 
 
     <script src="sopp.js"></script>

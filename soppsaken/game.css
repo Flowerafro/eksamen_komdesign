@@ -52,14 +52,35 @@ figure figcaption {
     margin: 1rem;
 }
 
-.mushroom-path-text span {
+.mushroom-path-text a {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.path-text-bold {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--white);
+}
+
+.game-title {
+    color: var(--cream);
+    font-size: var(--font-size-header-small);
+    font-weight: bold;
+    width: 70%;
+    line-height: 2rem;
+    padding: 0 1.125rem;
+    margin-top: 2rem;
 }
 
 .mushroom-path-text q {
     font-style: italic;
+    font-size: var(--font-size);
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
@@ -242,6 +263,18 @@ figure figcaption {
     height: 550px;
     }
 
+    #mushroom-game {
+        height: 260vh;
+    }
+
+    .mushroom img {
+        width: 150px;
+    }
+
+    #basket-text {
+        width: 70%;
+        margin-top: 2rem;
+    }
  }
 
  
@@ -256,8 +289,7 @@ figure figcaption {
     }
 
     .mushroom-path-text {
-        font-size: 30px;
-        width: 50%;
+        width: 70%;
     }
 
     #data-image {
@@ -270,19 +302,21 @@ figure figcaption {
     /* ------------- selve spilllayouten ----------- */
 
     #mushroom-path {
-        gap: 5rem 4rem;
+        gap: 2rem;
+        width: 70%;
+        height: 200vh;
     }
 
     .mushroom {
-        padding: 1rem;
+        padding: 0;
     }
     
     .mushroom img {
-        width: 150px;
+        width: 170px;
     }
     
     .mushroom img:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
         filter: drop-shadow(8px 8px 10px var(--brown));
         transition: 0.5s;
     }

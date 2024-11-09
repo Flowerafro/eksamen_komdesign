@@ -14,8 +14,9 @@
     --white: #fff;
     --black: #000;
 
-    --font-size: 16px;
-    --font-size-article: 14px;
+    --font-size-header-small: clamp(1.25rem, 1rem + 1vw, 1.5rem); 
+    --font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem); 
+    --font-size-article: clamp(0.875rem, 0.75rem + 0.5vw, 1rem); 
 }
 
 * {
@@ -34,7 +35,6 @@ html, body {
 body {
     overscroll-behavior: none;
     background-color: var(--black);
-    color: var(--white);
 }
 
 /*********************************************
@@ -112,7 +112,7 @@ body {
 
 /* ------------- overgang fra parallax til text boks----------- */
 
-#forest-break {
+.forest-break {
     background-image: url(IMG/tree-silouette.png);
     background-attachment: cover;
     background-position: center;
@@ -239,28 +239,21 @@ body {
     font-size: var(--font-size-article);
 }
 
-.article h1 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.article h2 {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-}
-
 .article h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.article h4 {
     font-size: 1.1rem;
-    letter-spacing: 1px;
-    margin-top: 1.5rem;
+    margin: 1rem 0;
 }
 
 .article p {
     font-size: var(--font-size-article);
     margin-bottom: 1rem;
-    margin-left: 1rem;
-    line-height: 1.5rem;
     letter-spacing: 1px;
+    line-height: 2rem;
 }
 
 .article ul {
@@ -269,17 +262,23 @@ body {
     margin: 1rem 0;
 
     background-color: var(--beige);
-    border: 5px solid var(--green);
+    border: 10px solid var(--green);
     color: var(--black);
 }
 
-.article ul h3 {
-    font-size: 1.1rem;
+.article ul p {
+    font-size: 1.3rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .article ul li {
     margin-bottom: 0.5rem;
+}
+
+.article ul li:nth-child(1) {
+    list-style: none;
+    font-weight: bold;
 }
 
 .article strong {
@@ -314,7 +313,28 @@ body {
 
 
 @media (min-width: 768px) {
-    
+    #intro h1 {
+        width: 70%;
+    } 
+    .intro-text {
+        width: 70%;
+        font-size: var(--font-size-header-small);
+        padding: 2rem;
+    }
+
+    .article {
+        max-width: 500px;
+        padding: 2.5rem;
+    }
+
+    .article ul li:nth-child(1) {
+        font-size: 1.5rem;
+    }
+
+    .btn-top {
+        font-size: 1.5rem;
+        bottom: 2rem;
+    }
 }
 
 /*********************************************
@@ -326,10 +346,7 @@ body {
         height: var(--100vh);
         padding: 0 5rem;
     }
-    #intro h1 {
-        font-size: 35px;
-        width: 70%;
-    } 
+    
     #intro span {
         font-size: 65px;
     }
@@ -338,11 +355,10 @@ body {
     }
     .intro-text {
         width: 60%;
-        font-size: 30px;
         padding: 2rem;
     }
 
-    #forest-break {
+    .forest-break {
         height: 700px;
         margin-bottom: -1rem;
     }

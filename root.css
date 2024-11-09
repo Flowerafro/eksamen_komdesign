@@ -129,3 +129,17 @@ header {
     justify-content: flex-start;
     align-items: center;
 }
+
+footer {
+    margin: 0;
+    padding: 1rem;
+    position: static;
+    bottom: 0;
+    max-width: 100%;
+    height: 10vh;
+    background-color: var(--grey);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -36,24 +36,6 @@ body {
     background: var(--white);
     color: var(--black);
 }
-
-/* header {
-    width: 100%;
-    background-color: transparent;
-}
-
-.logo {
-    display: inline-flex;
-    align-items: center;
-    background: #459677;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-
-    margin-right: 1rem;
-    padding: 1rem;
-} */
-
 /************* PARALLAX ***********/
 
 main {
