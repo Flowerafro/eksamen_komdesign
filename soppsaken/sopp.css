@@ -1,29 +1,4 @@
-:root {
-    --responsive-width: min(96%, 1400px);
 
-    --100vh: 100vh;
-    --50vh: 50vh;
-
-    --dark-green: #2E8B57;
-    --light-green: #98FB98;
-    --brown: #8B4513;
-    --beige: #F5F5DC;
-    --dark-red: #8B0000;
-    --cream: #FFFDD0;
-    --dark-gray-green: #2F4F4F;
-    --white: #fff;
-    --black: #000;
-
-    --font-size-header-small: clamp(1.25rem, 1rem + 1vw, 1.5rem); 
-    --font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem); 
-    --font-size-article: clamp(0.875rem, 0.75rem + 0.5vw, 1rem); 
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html, body {
     width: 100%;
