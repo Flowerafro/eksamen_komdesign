@@ -71,6 +71,8 @@ header {
     padding: 1rem;
 }
 
+/* headlines in intro*/
+
 #headlines {
     display: flex;
     flex-direction: column;
@@ -82,7 +84,6 @@ header {
 }
 
 .headline {
-    /* background-color: var(--black-opacity); */
     backdrop-filter: blur(10px);
     padding: 1.5rem;
     color: var(--white);
@@ -130,9 +131,10 @@ header {
 
 #intro {
     width: 100%;
-    height: 120vh;
+    height: auto;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -141,8 +143,17 @@ header {
     z-index: 100;
 }
 
-/**** Hjerte oppe i høyre hjørne *****/
-.heart-center-70px {
+/**** puls oppe i høyre hjørne *****/
+.pulse-container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulse-center-70px {
     background-color: var(--red);
     width: 70px;
     height: 70px;
@@ -150,7 +161,8 @@ header {
     border-radius: 50%;
 }
 
-.heart-outer-center-72px {
+/**** Puls i senter *****/
+.pulse-outer-center-72px {
     background-color: var(--red-opacity);
     width: 75px;
     height: 75px;
@@ -158,8 +170,9 @@ header {
     border-radius: 50%;
 }
 
-#heart-center {
+#pulse-center {
     animation: pulse 2s infinite;
+    
 }
 
 /**************************************** ARTICLE ******************************************************/
