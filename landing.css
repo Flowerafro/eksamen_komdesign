@@ -41,9 +41,76 @@ header {
     padding: 0 1rem;
 }
 
+/************* breaking news banner **************/ 
+.news-container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
 
+.breaking-news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.news-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 210px;
+}
+
+.news-scroll {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    padding-left: 10px;
+}
+
+.scrolling-text {
+    letter-spacing: 1px;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.news-scroll a {
+    text-decoration: none;
+    color: black;
+    margin-right: 150px;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 2px !important;
+    background-color: rgb(207, 23, 23);
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+}
 /************************** top news story ********* */
+
+
 
 #top-story {
     background-color: #f1f1f1;
@@ -320,3 +387,4 @@ footer {
     }
   
 }
+
