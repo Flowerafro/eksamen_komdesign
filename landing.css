@@ -70,23 +70,29 @@ header {
     max-width: 400px;
     height: auto;
     max-height: 400px;
-    display: flex;
-    justify-content: center;
     
 }
 
 #top-story-header {
     width: 100%;
     height: auto;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem;
+    text-align: left;
 }
 
 #top-story-header h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
-.top-story-image {
+figure {
+    display: flex;
+    flex-direction: column;
+    max-width: min(96%, 1000px);
+    margin: 0 auto;
+}
+
+figure img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -199,18 +205,12 @@ footer {
         padding: 10px;
     }
 
-    #top-story-image {
-        max-width: 800px;
-        max-height: 500px;
-    }
-
-    .top-story-image {
-        height: auto;
+    figure img {
+       
     }
 
     #top-story-header {
         padding: 1.5rem;
-        text-align: left;
     }
 
     #top-story-header h2 {

@@ -27,6 +27,7 @@
     --cream: #FFFDD0;
     --dark-gray-green: #2F4F4F;
 
+    --font-size-header: clamp(1.5rem, 2rem + 1vw, 2rem);
     --font-size-header-small: clamp(1.25rem, 1rem + 1vw, 1.5rem); 
     --font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem); 
     --font-size-article: clamp(0.875rem, 0.75rem + 0.5vw, 1rem); 
