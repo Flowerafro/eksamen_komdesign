@@ -226,92 +226,50 @@ figure img {
     grid-column: 2/3;
 }
 
-/************************************************ MAP *******************************************************/
+/************************************************ MAP w Parallax *******************************************************/
 
-.map-section {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--black);
-    position: relative; 
-}
-
-#map {
-    height: 90%;
-}
-
-#start-animation {
-    border: none;
-    border-radius: 4px;
-    background-color: var(--red);
-    color: var(--white);
-    padding: 1rem;
-    cursor: pointer;
-
-    position: absolute;
-    top: 5%; 
-    left: 5%; 
-    z-index: 10;
-}
-
-/* Marker style */
-.marker {
-    background-repeat: no-repeat;
+#parallax-1-bg {
+    background-image: url('IMG/tofte1.png');
+    background-attachment: fixed;
     background-position: center;
-    cursor: pointer;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    transition: all 1s ease; 
 }
 
-.popup-content {
-    padding: 5px;
-    max-width: 100px;
-    background-color: #fff;
-    border-radius: 8px;
-    transition: all 1s ease;
+.parallax {
+    width: 100%;
+    min-height: auto;
+
+    border: red 1px solid;
 }
 
-.popup-content p {
-    margin: 0;
-    font-size: 12px;
-    color: #333;
-    text-wrap: wrap;
+.parallax-div {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.popup-content button {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: var(--green);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.text-box {
+
+    margin-left: 1rem;
+    padding: 1.5rem;
+    width: min(96%, 900px);
+    max-width: 500px;
+    background-color: var(--white);
 }
 
-.popup-content .more-info {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease, opacity 0.8s ease;
+.text-box p {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
 }
 
-.popup-content .more-info p {
-    margin: 0;
-    font-size: 11px;
-    color: #666;
-}
 
-.popup-content .more-info.show {
-    max-height: 200px; /* Adjust as needed */
-    opacity: 1;
-    overflow: scroll;
-}
-
-.maplibregl-popup-close-button {
-    padding: 5px;
-    font-size: 20px;
-}
 /**************************************** VIDEO in article ******************************************************/
 
 .video-div {
@@ -340,73 +298,7 @@ figure img {
 
 /************************************** Image timeline ******************************************************/
 
-.timeline {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: var(--black);
-    color: var(--white);
 
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0;
-}
-
-.timeline .images img {
-    display: none;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-}
-
-.timeline .images img.active {
-    display: block;
-    transition: all 1s ease;
-}
-
-.buttons{
-    position: absolute;
-    left: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    height: 100%;
-}
-
-.buttons button {
-    background-color: var(--red);
-    color: var(--white);
-    padding: 0.5rem;
-
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-top {
-    position: absolute;
-    bottom: 1rem;
-    right: 0.5rem;
-
-    margin: 1rem;
-    padding: 2rem 1rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-decoration: none;
-
-    border: none;
-    border-radius: 5px;
-    outline: none;
-
-    background-color: red;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
 
 /*******************************************************************************************************/
 /*                                             KEYFRAMES                                               */
