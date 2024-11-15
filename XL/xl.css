@@ -3,11 +3,13 @@
 /*********************************************************************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     /*COLOR*/
     --black: #000;
     --black-opacity: rgba(0, 0, 0, 0.5);
+    --black-opacity-2: rgba(0, 0, 0, 0.9);
     --white: #fff;
     --red: #ff0000;
     --red-opacity: rgba(255, 0, 0, 0.5);
@@ -17,8 +19,10 @@
 
     /*FONT*/
 
+    --font-amk: "Inconsolata", monospace;
     --font-family: 'poppins', sans-serif;
     --font-family-small: 'Open Sans', sans-serif;
+
     --font-size-headline: clamp(32px, calc((36 / 580) * 100vw), 45px); /* min, preferred, max */
     --font-size-text: clamp(21px, calc((26 / 580) * 100vw), 30px);
     --font-size-headline-700: clamp(32px, calc((36 / 700) * 100vw), 45px); /* min, preferred, max for iPad */
@@ -234,14 +238,12 @@ figure img {
     background-position: center;
     background-size: cover; 
     background-repeat: no-repeat;
-    transition: all 1s ease; 
+    transition: background-image 1s ease; 
 }
 
 .parallax {
     width: 100%;
     min-height: auto;
-
-    border: red 1px solid;
 }
 
 .parallax-div {
@@ -252,22 +254,80 @@ figure img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+}
+
+.parallax-div-left {
+    align-self: flex-start;
+}
+.parallax-div-right {
+    align-self: flex-end;
+}
+
+.amk-melding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8rem;
+    width: min(96%, 900px);
+    max-width: 300px;
+    margin-left: 1rem;
+
+    background-color: #ded9d5;
+    color: var(--black);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.amk-text {
+    font-family: var(--font-amk);
+    margin-left: 1rem;
+    text-align: left;
 }
 
 .text-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    margin-left: 1rem;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
     width: min(96%, 900px);
-    max-width: 500px;
-    background-color: var(--white);
+    max-width: 300px;
+    margin-right: 1rem;
+
+    background-color: var(--black-opacity-2);
+    color: var(--white);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+
+}
+
+.text-box img {
+   align-self: right;
 }
 
 .text-box p {
-    font-size: 1.2rem;
-    line-height: 2.1rem;
+    font-family: var(--font-amk);
+    font-size: 1.1rem;
+    text-align: right;
 }
+
+.dilemma {
+    margin: 1rem;
+    padding:  3rem 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    backdrop-filter: blur(20px);
+    color: var(--white);
+    text-align: center;
+    align-self: center;
+}
+
+.dilemma q {
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
 
 
 /**************************************** VIDEO in article ******************************************************/

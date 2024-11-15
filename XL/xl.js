@@ -10,29 +10,26 @@ function isInViewport(el) {
     );
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     if (isInViewport(document.getElementById("intro"))) {
-        document.getElementById("background").style.backgroundImage = "IMG/tofte1.png";
+        document.getElementById("parallax-1-bg").style.backgroundImage = "IMG/tofte1.png";
     }
 }, {
     passive: true
 });
-
+ */
 
 document.addEventListener('scroll', function () {
+    const elements = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth"];
+    const images = ["IMG/tofte2.png", "IMG/tofte3.png", "IMG/tofte4.png", "IMG/tofte5.png", "IMG/tofte6.png", "IMG/tofte7.png", "IMG/tofte8.png", "IMG/tofte9.png"];
 
-    if (isInViewport(document.getElementById("first"))) {
-        document.getElementById("background").style.backgroundImage = "";
-    }
-    if (isInViewport(document.getElementById("second"))) {
-        document.getElementById("background").style.backgroundImage = "";
-    }
-    if (isInViewport(document.getElementById("third"))) {
-        document.getElementById("background").style.backgroundImage = "";
-    }
-    if (isInViewport(document.getElementById("fourth"))) {
-        document.getElementById("background").style.backgroundImage = "";
-    }
+    elements.forEach((id, index) => {
+        const element = document.getElementById(id);
+        if (element && isInViewport(element)) {
+            console.log(`Element ${id} is in viewport`);
+            document.getElementById("parallax-1-bg").style.backgroundImage = `url(${images[index]})`;
+        }
+    });
 }, {
     passive: true
 });
