@@ -23,12 +23,14 @@
     --font-family: 'poppins', sans-serif;
     --font-family-small: 'Open Sans', sans-serif;
 
-    --font-size-headline: clamp(32px, calc((36 / 580) * 100vw), 45px); /* min, preferred, max */
-    --font-size-text: clamp(21px, calc((26 / 580) * 100vw), 30px);
-    --font-size-headline-700: clamp(32px, calc((36 / 700) * 100vw), 45px); /* min, preferred, max for iPad */
-    --font-size-text-700: clamp(21px, calc((26 / 700) * 100vw), 30px);
-    --font-size-headline-1200: clamp(32px, calc((36 / 1200) * 100vw), 45px); /* min, preferred, max for desktop */
-    --font-size-text-1200: clamp(21px, calc((26 / 1200) * 100vw), 30px); 
+    --font-size-headline: clamp(23px, calc((30 / 580) * 100vw), 30px);
+    --font-size-text: clamp(20px, calc((25 / 580) * 100vw), 25px);
+
+    --font-size-headline-700: clamp(23px, calc((30 / 700) * 100vw), 30px);
+    --font-size-text-700: clamp(20px, calc((25 / 700) * 100vw), 25px);
+
+    --font-size-headline-1200: clamp(23px, calc((30 / 1200) * 100vw), 30px); 
+    --font-size-text-1200: clamp(20px, calc((25 / 1200) * 100vw), 25px); 
 }
 
 * {
@@ -42,6 +44,7 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: var(--black);
 }
 
 h1, h2, h3 {
@@ -175,8 +178,7 @@ header {
 }
 
 #pulse-center {
-    animation: pulse 2s infinite;
-    
+    animation: pulse 2s infinite;   
 }
 
 /**************************************** ARTICLE ******************************************************/
@@ -394,7 +396,7 @@ figure img {
 }
 
 
-/*************************************** gradient keyframe **********************************************/
+/*************************************** SIRENgradient keyframe **********************************************/
 
 @keyframes hero-gradient-animation {
     0% {
@@ -412,12 +414,12 @@ figure img {
         --s-end-2: 54%;
         --y-2: 32%;
         --x-2: 11%;
-        --c-2: hsla(232.5, 25%, 12%, 1);
+        --c-2:hsla(321, 0%, 0%, 1);
         --y-3: 31%;
         --s-start-3: 0%;
         --s-end-3: 67%;
         --x-3: 2%;
-        --c-3:  hsla(240, 100%, 10%, 1);
+        --c-3: hsla(240, 100%, 40%, 1);
         --c-4: hsla(349, 0%, 0%, 1);
         --x-4: 74%;
         --y-4: 93%;
@@ -435,18 +437,18 @@ figure img {
         --s-end-1: 77%;
         --y-1: 41%;
         --x-1: 1%;
-        --c-1:hsla(240, 100%, 20%, 1);
+        --c-1: hsla(240, 100%, 40%, 1);
         --s-start-2: 6%;
-        --s-end-2: 73%;
+        --s-end-2: 50%;
         --y-2: 93%;
         --x-2: 44%;
-        --c-2: hsla(321, 0%, 0%, 1);
+        --c-2: hsla(240, 100%, 20%, 1);
         --y-3: 51%;
         --s-start-3: 8%;
         --s-end-3: 86%;
         --x-3: 97%;
-        --c-3: hsla(0, 0%, 0%, 1); 
-        --c-4: hsla(232.5, 19%, 16%, 1);
+        --c-3:hsla(0, 1000%, 4%, 1);
+        --c-4:hsla(240, 100%, 40%, 1);
         --x-4: 10%;
         --y-4: 69%;
         --s-start-4: 20%;
@@ -616,14 +618,15 @@ figure img {
     --c-2: hsla(232.5, 25%, 12%, 1);
     --y-3: 31%;
     --x-3: 2%;
-    --c-3:  hsla(240, 100%, 10%, 1);
+    --c-3:  hsla(240, 100%, 20%, 1);
     --c-4: hsla(349, 0%, 0%, 1);
     --x-4: 74%;
     --y-4: 93%;
-    ;
+    
     background-color: hsla(232.5, 0%, 0%, 1);
     background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
-    animation: hero-gradient-animation 10s linear infinite alternate;
+    animation: hero-gradient-animation 2s linear infinite alternate;
+    animation-delay: 10s;
     background-blend-mode: normal, normal, normal, normal, normal;
 }
 
@@ -670,9 +673,6 @@ figure img {
     text-align: center;
 }
   
-.timeline .images img {
-    max-width: 800px;
-}
 
 
 
@@ -680,14 +680,7 @@ figure img {
 
 @media screen and (min-width: 1024px) {
 
-    .parallaxVideo {
-        width: 100%;
-    }
-
-    .video-text {
-        width: 20%;
-    }
-
+  
     .btn-top:hover {
         background-color: green;
         transform: translateY(-15px);

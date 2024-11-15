@@ -7,23 +7,10 @@
     <title>XL-story</title>
     <link rel="stylesheet" href="XL.css">
     <link rel="icon" href="IMG/amkbil.png" type="image/x-icon" />
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css' />
-    <script src='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js'></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
 
-        html,
-        body,
-        #map {
-            height: 100%;
-        }
-    </style>
 </head>
 
-<body class="black-gradient">
+<body>
     <header>
         <a href="/landing.html" class="logo">DB</a>
     </header>
@@ -42,7 +29,11 @@
     </section> -->
 
     <div>
-        <!-- Innledning md dramatiske fakta om sentralisering-->
+        <div class="pulse-container">
+            <div id="pulse-center" class="pulse-outer-center-72px">
+                <div id="heart" class="pulse-center-70px"></div>
+            </div>
+        </div>
     </div>
 
     <div id="intro" class="black-gradient">
@@ -51,29 +42,23 @@
                 <h1 class="text-focus-in"> Forestill deg at du plutselig kjenner en sterk smerte i brystet.</h1>
             </div>
             <div class="headline">
-                <p> Pulsen stiger. Smerten stråler nedover armen. Du er redd og med skjelvende hender ringer du 113.
+                <p> Pulsen stiger. Smerten stråler nedover armen.
                 </p>
             </div>
             <div class="headline">
-                <p> Ambulansen er på vei. 50 minutter, sier de. Du legger på røret og setter deg ned på gulvet. Nå må du
-                    bare vente.
+                <p> Svimmel.
                 </p>
             </div>
             <div class="headline">
-                <p> Pulsen øker. Smarten blir verre og du prøver å berolige deg med at hjelpen er på vei.
+                <p> Du er redd.
                 </p>
             </div>
             <div class="headline">
-                <p> .. om bare de rekker frem til deg i tide.
+                <p> Vet du hvor langt unna hjelpen er når sekundene teller?
                 </p>
             </div>
-        </div>
-        <div class="pulse-container">
-            <div id="pulse-center" class="pulse-outer-center-72px">
-                <div id="heart" class="pulse-center-70px"></div>
-            </div>
-        </div>
 
+        </div>
     </div>
 
 
