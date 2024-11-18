@@ -1,27 +1,33 @@
-/* pulsteller */
+/* pulsteller som økes en gang i sekundet */
 
 let counter = 60;
 const maxCount = 240;
+let intervalId;
 
-/* const intervalId = setInterval(() => {
-    document.getElementById("counter").innerText = counter;
-    console.log(counter);
-    counter++;
+function startCounter() {
+    intervalId = setInterval(() => {
+        counter++;
+        document.getElementById("counter").innerText = counter;
+        console.log(counter);
 
-    if (counter > maxCount) {
-        clearInterval(intervalId);
-    }
-}, 1000); */
-
-document.addEventListener('scroll', function () {
-    document.querySelectorAll('.article').forEach((article) => {
-        if (isInViewport(article)) {
-            console.log(`Article ${article.id} is in viewport`);
-            counter++;
+        if (counter >= maxCount) {
+            clearInterval(intervalId);
         }
-    })
+    }, 1500);
+}
 
-})
+/* Start counter when scrolling to article-1 */
+document.addEventListener('scroll', function () {
+    const article1 = document.getElementById("article-1");
+    const rect = article1.getBoundingClientRect();
+    const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+    if (inViewport && !intervalId) {
+        console.log(`Article ${article1.id} is in viewport`);
+        startCounter();
+    }
+});
+
 
 /* Bytte bilder til første kartet */
 function isInViewport(el) {
