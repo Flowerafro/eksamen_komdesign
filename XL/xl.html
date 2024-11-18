@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>XL-story</title>
     <link rel="stylesheet" href="XL.css">
-    <link rel="icon" href="IMG/amkbil.png" type="image/x-icon" />
+    <link rel="icon" href="IMG/amkbil.png" type="image/x-icon">
 
 </head>
 
@@ -15,54 +15,60 @@
         <a href="/landing.html" class="logo">DB</a>
     </header>
 
-    <!-- <section id="headlines">
-        <div class="headline">
-            <h1 class="text-focus-in">Hovedtittel</h1>
-        </div>
-        <div class="headline">
-            <p>"Første sitat som oppsummerer saken"</p>
-        </div>
-        <div class="headline">
-            <p>".. et sitat som fanger inn leseren og som hinter om pulserende rød sirkel som dukker opp rett under?"
-            </p>
-        </div>
-    </section> -->
-
-    <div>
-        <div class="pulse-container">
-            <div id="pulse-center" class="pulse-outer-center-72px">
-                <div id="heart" class="pulse-center-70px"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="intro" class="black-gradient">
+    <section id="intro">
         <div id="headlines">
             <div class="headline">
-                <h1 class="text-focus-in"> Forestill deg at du plutselig kjenner en sterk smerte i brystet.</h1>
+                <p class="text-focus-in"> Forestill deg at du plutselig kjenner en sterk smerte i brystet.</p>
+            </div>
+            <div class="pulse-container">
+                <div class="pulse-first pulse-outer">
+                    <div class="pulse"></div>
+                </div>
             </div>
             <div class="headline">
                 <p> Pulsen stiger. Smerten stråler nedover armen.
                 </p>
             </div>
-            <div class="headline">
-                <p> Svimmel.
-                </p>
+            <div class="pulse-container">
+                <div class="pulse-second pulse-outer">
+                    <div class="pulse"></div>
+                </div>
             </div>
             <div class="headline">
-                <p> Du er redd.
+                <p> Svimmel. Hjertet hamrer. Du er redd..
                 </p>
+            </div>
+            <div class="pulse-container">
+                <div class="pulse-second pulse-outer">
+                    <div class="pulse"></div>
+                </div>
             </div>
             <div class="headline">
                 <p> Vet du hvor langt unna hjelpen er når sekundene teller?
                 </p>
             </div>
-
+            <div class="pulse-container">
+                <div class="pulse-last pulse-outer" id="lastpulse">
+                    <div class="pulse"></div>
+                </div>
+            </div>
         </div>
-    </div>
+        <div id="main-title" class="main-title">
+            <h1>SENTRALISERING <span></span></h1>
+        </div>
+    </section>
+
+
+    <section id="buffer">
+
+    </section>
 
 
     <article id="article-1" class="article">
+        <div class="counter-box">
+            <div class="pulse-small"></div>
+            <p id="counter">60</p>
+        </div>
         <div class="article-div">
             <h2> Kort introtekst om temaet sentralisering</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
@@ -77,9 +83,11 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus, veritatis placeat natus iure ex ut
                 quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
-                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus
+                reiciendis
                 cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, nostrum impedit nesciunt excepturi
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, nostrum impedit nesciunt
+                excepturi
                 tempora illum officia omnis reprehenderit quibusdam magnam!</p>
         </div>
         <div class="article-div">
@@ -93,7 +101,7 @@
 
         <div class="parallax-div">
             <div class="amk-melding parallax-div-left" id="one">
-                <img src="/XL/IMG/message.png" alt="meldingsikon fra AMK" width="50px" height="50px">
+                <img src="/XL/IMG/message.png" alt="meldingsikon fra AMK" width="50" height="50">
                 <p class="amk-text">
                     > <br>
                     <strong>AMK-sentral:</strong><br>
@@ -120,7 +128,7 @@
 
         <div class="parallax-div">
             <div class="amk-melding parallax-div-left" id="third">
-                <img src="/XL/IMG/message.png" alt="meldingsikon fra AMK" width="50px" height="50px">
+                <img src="/XL/IMG/message.png" alt="meldingsikon fra AMK" width="50" height="50">
                 <p class="amk-text">
                     > <br>
                     <strong>AMK-sentral:</strong>
@@ -130,7 +138,7 @@
         </div>
 
         <div class="parallax-div">
-            <div class="dilemma" id="third">
+            <div class="dilemma">
                 <p>- Så da sto vi der og tenkte: <br><br> <q>Hva gjør vi nå? </q></p>
                 <br>
                 <p>Vi har hentet en 60 år gammel dame med
@@ -174,10 +182,13 @@
             <p> Kort introtekst om temaet sentralisering , Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus, veritatis placeat natus iure ex ut
                 quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
-                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus
+                reiciendis
                 cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos nam nobis at labore aspernatur quia vitae
-                aliquam qui excepturi ad! Eos repellendus asperiores vel repellat, nisi pariatur. Tempore dignissimos
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos nam nobis at labore aspernatur quia
+                vitae
+                aliquam qui excepturi ad! Eos repellendus asperiores vel repellat, nisi pariatur. Tempore
+                dignissimos
                 eligendi dolores eos iste consectetur ducimus, illo quo nihil modi tenetur?</p>
         </div>
     </article>
@@ -188,7 +199,7 @@
         </div>
 
         <video autoplay muted loop>
-            <source src="IMG/amk3.mp4" type="video/mp4" />
+            <source src="IMG/amk3.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -204,9 +215,11 @@
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus, veritatis placeat natus iure ex ut
                 quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
-                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus
+                reiciendis
                 cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sint iusto officia voluptas qui facere fugit
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sint iusto officia voluptas qui facere
+                fugit
                 itaque totam beatae rem?</p>
         </div>
     </article>
@@ -217,7 +230,7 @@
         <!-- Nytt kart?-->
     </section>
 
-    <article id="article-3" class="article">
+    <article id="article-4" class="article">
         <div class="article-div">
             <h2> ny tittel</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
@@ -233,9 +246,11 @@
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus, veritatis placeat natus iure ex ut
                 quisquam, doloremque quam adipisci voluptatum suscipit cum, dolorum non veniam quis animi nulla
-                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus reiciendis
+                perspiciatis minus eos quae illum quaerat! Ducimus facilis iure nulla accusantium accusamus
+                reiciendis
                 cumque fuga, nemo corporis saepe! Rem adipisci voluptas officiis?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sint iusto officia voluptas qui facere fugit
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id sint iusto officia voluptas qui facere
+                fugit
                 itaque totam beatae rem?</p>
         </div>
         <a href="#" class="btn-top">TOP</a>
