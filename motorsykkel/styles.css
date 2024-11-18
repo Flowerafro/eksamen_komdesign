@@ -7,7 +7,7 @@
 
 
 *, *::before, *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
@@ -20,13 +20,15 @@ body {
     font-family: 'Poppins', sans-serif;
     max-width: 700px;
 }
-
-
+p {
+    line-height: 2rem;
+}
 
 .container {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    margin-bottom: 10vh;
 }
 
 .space-holder {
@@ -88,41 +90,59 @@ body {
 
 .info-box {
     background-color: #f0f0f0;
-    color: #000;
-    text-align: center;
-    max-width: 300px;
-    padding: 1rem;
+    border-radius: 10px;
+    color: var(--black);
+    text-align: left;
+    width: calc(400px - 3rem);
+    padding: 2rem;
+}
+
+.info-box h1 {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    margin: 0;
 }
 
 
 
 /*************************************************/
 
-h1 {
-    
-}
 .interview {
+    margin-top: 10rem;
+    padding: 1rem;
     text-align: left;
-    background-color: var(--intro-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.interview-bg {
+    width: calc(100% - 2rem);
+    max-width: 700px;
+    
 }
 
 .interview-text {
     margin: 1rem; 
-    padding: 1rem;
+    padding: 3rem 1rem;
     height: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
 
-    width: calc(100% - 2rem);
-    max-width: 700px;
-
-    border: 2px solid red;
+.interview-text h3 {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .interview-text p {
     text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .introlink {
@@ -137,6 +157,7 @@ h1 {
     max-width: 600px;
     height: auto;
     align-self: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 }
 
 .interview-text figure img {
@@ -145,6 +166,14 @@ h1 {
     object-fit: cover;
 }
 
+figcaption {
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin:0;
+    color: var(--white);
+    background-color: var(--grey);
+}
 
 
 /*************************************************/
@@ -158,10 +187,16 @@ h1 {
 
 .article-intro {
     text-transform: uppercase;
+    font-wegiht: 700;
+}
+
+.article p {
+    margin: 2rem 0;
+    padding: 1rem;
 }
 
 .article figure {
-    margin: 0;
+    margin-top: 1rem 0;
     padding: 0;
     width: 100%;
     max-width: 600px;
