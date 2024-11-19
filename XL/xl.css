@@ -52,6 +52,10 @@ h1, h2, h3 {
     font-family: var(--font-family);
 }
 
+a {
+    font-family: var(--font-family-small);
+}
+
 header {
     width: 100%;
     padding: 0;
@@ -86,6 +90,8 @@ header {
     position: fixed;
     top: 0;
     color: var(--white);
+    font-family: var(--font-family-small);
+    z-index: 1000;
 }
 
 .puls-img {
@@ -178,13 +184,15 @@ header {
    /*  font-size: var(--font-size-maintitle); */
 }
 
-.headline h1 {
+.headline h2 {
     font-size: var(--font-size-headline);
     font-weight: 400;
 }
 
 .headline p {
     font-family: var(--font-family-small);
+    color: var(--white);
+    font-size: 1.3rem;
     margin-bottom: 4rem;
     letter-spacing: 2px;
     line-height: 2.5rem;
@@ -197,6 +205,7 @@ header {
     height: 100vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -618,6 +627,10 @@ figure img {
         opacity: 0.1;
         transform: scale(1);
     }
+}
+
+@keyframes pulse-end {
+
 }
 
 

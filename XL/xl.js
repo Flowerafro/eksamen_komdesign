@@ -1,19 +1,26 @@
 /* Gjøre pulsmåler synlig når artikkel er i viewport */
 
 document.addEventListener('scroll', function () {
-    const articleId = document.getElementById("article-1");
+    const articles = document.querySelectorAll(".article");
     const counterBox = document.querySelector(".counter-box");
-    const rect = articleId.getBoundingClientRect();
-    const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+    let isAnyArticleInViewport = false;
 
-    if (inViewport) {
-        console.log(`Article ${articleId.id} is in viewport`);
+    articles.forEach(article => {
+        const rect = article.getBoundingClientRect();
+        const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+        if (inViewport) {
+            isAnyArticleInViewport = true;
+        }
+    });
+
+    if (isAnyArticleInViewport) {
+        console.log(`At least one article is in viewport`);
         counterBox.style.display = "flex";
     } else {
         counterBox.style.display = "none";
     }
 });
-
 /* pulsteller som økes en gang i sekundet */
 
 let counter = 60;
