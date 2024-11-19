@@ -1,3 +1,19 @@
+/* Gjøre pulsmåler synlig når artikkel er i viewport */
+
+document.addEventListener('scroll', function () {
+    const articleId = document.getElementById("article-1");
+    const counterBox = document.querySelector(".counter-box");
+    const rect = articleId.getBoundingClientRect();
+    const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+    if (inViewport) {
+        console.log(`Article ${articleId.id} is in viewport`);
+        counterBox.style.display = "flex";
+    } else {
+        counterBox.style.display = "none";
+    }
+});
+
 /* pulsteller som økes en gang i sekundet */
 
 let counter = 60;
@@ -13,7 +29,7 @@ function startCounter() {
         if (counter >= maxCount) {
             clearInterval(intervalId);
         }
-    }, 1500);
+    }, 2000);
 }
 
 /* Start counter when scrolling to article-1 */
@@ -29,11 +45,11 @@ document.addEventListener('scroll', function () {
 });
 
 
+
 /* Bytte bilder til første kartet */
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
-
         (rect.top <= 0 && rect.bottom >= 0) ||
         (rect.top >= 0 && rect.left >= 0 &&
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
