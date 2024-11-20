@@ -17,6 +17,7 @@
     --red-opacity: rgba(255, 0, 0, 0.5);
     --green: #A7C399;
     --dark-grey: #2a272a;
+    
     --grey-purple: #4b4a54;
     --light-grey: #ded9d5;
 
@@ -75,14 +76,13 @@ header {
 
 header a img {
     z-index: 1001;
-    background-color: var(--white);
+    background-color: var(--dark-grey);
     width: 50px;
     height: auto;
     padding: 0.7rem;
     margin: 0.5rem;
     border-radius: 5px 0 5px 0;
 }
-
 
 .counter-box {
     width: 100%;
@@ -123,6 +123,8 @@ header a img {
     animation: pulse-small 2s infinite;
 }
 
+
+
 /********************************** INTRO w heart **********************************************/
 
 .intro {
@@ -140,50 +142,36 @@ header a img {
 
 /* headlines in intro*/
 
-#headlines {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
+.headlines {
     width: 100%;
     height: auto;
 }
 
 .headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
     padding: 1.5rem;
     color: var(--white);
     text-align: center;
     letter-spacing: 1px;
     position: relative;
-    width: 80%;
-    margin: 20vh auto; /* mellomrom mellom headlines*/
 }
 
 .headline-big {
     padding: 2rem;
     font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 3rem;
+    font-weight: 500;
+    font-size: 2rem;
 
     color: var(--white);
     text-align: center;
-    letter-spacing: 5px;
-
-    position: relative;
-    width: 80%;
-    margin: 10vh auto; 
-    
-}
-
-.headline .headline-title {
-    margin-bottom: 1rem;
-   /*  font-size: var(--font-size-maintitle); */
-}
-
-.headline h2 {
-    font-size: var(--font-size-headline);
-    font-weight: 400;
+    letter-spacing: 2px;
 }
 
 .headline p {
@@ -210,37 +198,10 @@ header a img {
     display: inline-block;
 }
 
-@keyframes numberchange {
-
-    0% {
-        content: " ";
-        color: var(--white);
-    }
-    15% {
-        content: "1 ";
-        color: var(--yellow);
-    }
-
-    50% {
-        content: "1 1 ";
-        color: var(--orange);
-        transform: scale(1.1);
-    }
-
-    75% {
-        content: "1 1 3 ";
-        color: var(--red);
-        transform: scale(1.3);
-    }
-    100% {
-        content: "1 1 3 ";
-        color: var(--red);
-        transform: scale(1.5);
-    }
-}
-
 
 /**** pulserende rødt "hjerte" *****/
+
+
 .pulse-container {
     width: 100%;
     height: 100vh;
@@ -257,7 +218,7 @@ header a img {
     height: 70px;
     filter: drop-shadow(0 0 15rem var(--red));
     border-radius: 50%;
-}
+} 
 
 /**** Puls i senter *****/
 .pulse-outer {
@@ -273,14 +234,12 @@ header a img {
 }
 
 .pulse-second {
-    animation: pulse 1.5s infinite;   
+    animation: pulse 1.5s infinite;
 }
 
 .pulse-last {
     animation: pulse-last 1s infinite;   
 }
-
-
 
 /**************************  MAIN title*********************/ 
 
@@ -297,14 +256,18 @@ header a img {
 }
 
 .main-title h1 {
+    display: flex;
+    flex-direction: column;
+
     color: var(--black);
     text-align: left;
     font-size: 1.8rem;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
 }
 
 .main-title h1 span {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    padding:0;
 }
 
 #intro, #main-title, #buffer {
@@ -315,33 +278,12 @@ header a img {
     background-color: red !important;
 }
 
-/************************** changing MAIN title *********************/ 
-
-
 .h1-title::before {
     content: "DREPER";
     animation-name: titlechange;
     animation-iteration-count: infinite;
     animation-duration: 5s;
     padding-left: 10px;
-}
-
-@keyframes titlechange {
-
-    0% {
-        content: "SKADER";
-    }
-    50% {
-        content: "DREPER";
-    }
-
-    75% {
-        content: "UTFORDRER";
-    }
-
-    100% {
-        content: "DREPER";
-    }
 }
 
 /**************************************** Pulsteller & liten puls ******************************************************/
@@ -376,6 +318,7 @@ header a img {
     padding: 1rem;
 }
 
+
 .quote {
     display: block;
     padding: 0.5rem 1rem;
@@ -389,7 +332,7 @@ header a img {
     margin-top: 3rem;
     margin-bottom: 1rem;
 
-    background-color: #262020;
+    background-color: var(--dark-grey);
     color: var(--white);
 }
 
@@ -399,7 +342,10 @@ header a img {
     line-height: 2rem;
     margin: 1rem 0;
     font-size: 1rem;
+}
 
+.article-div p i {
+    letter-spacing: 1px;
 }
 
 figure {
@@ -477,6 +423,11 @@ figure img {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 }
 
+.amk-melding img {
+    width: 50px;
+    height: auto;
+}
+
 .amk-text {
     font-family: var(--font-amk);
     margin-left: 1rem;
@@ -507,28 +458,33 @@ figure img {
     font-family: var(--font-amk);
     font-size: 1.1rem;
     text-align: right;
+    line-height: 1.5rem;
+}
+
+.strong-text {
+    font-weight: 700;
+    color: var(--red);
+}
+
+.dilemma-div {
+    margin: 0 auto;
+    padding: 2rem;
+    width: min(96%, 400px);
 }
 
 .dilemma {
-    margin: 1rem;
-    padding:  3rem 1.5rem;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    display: block;
+    padding: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
     font-family: var(--font-family);
-    font-size: 1.2rem;
-   
+    font-style: italic;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+
     background-color: var(--dark-grey);
     color: var(--white);
-    text-align: center;
-    align-self: center;
 }
-
-.dilemma q {
-    font-style: italic;
-    letter-spacing: 1px;
-}
-
 
 
 /**************************************** VIDEO in article ******************************************************/
@@ -557,7 +513,40 @@ figure img {
     max-width: 400px;
 }
 
+/****************************** the end******************************/
+#theend-buffer {
+    width: 100%;
+    height: 50vh;
+}
+#theend, #theend-buffer, #theend-titlebox, #last-pulse {
+    transition: background-color 2s ease-in-out;
+}
+
+#theend-titlebox {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#theend-title {
+   font-family: var(--font-family);
+   font-weight: 700;
+   font-size: 3rem;
+   padding-left: 0.5rem;
+   color: var(--black);
+}
+
 /*** TOP BTN ***/
+
+#last-headline {
+    margin-top: 5rem;
+    position: relative;
+}
 
 .btn-top {
     position: absolute;
@@ -570,12 +559,14 @@ figure img {
     font-weight: 700;
     text-decoration: none;
 
+    z-index: 1000;
+
     border: none;
     border-radius: 5px;
     outline: none;
 
-    background-color: var(--dark-red);
-    color: var(--cream);
+    background-color: var(--black);
+    color: var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
@@ -583,6 +574,38 @@ figure img {
 /*******************************************************************************************************/
 /*                                             KEYFRAMES                                               */
 /*******************************************************************************************************/
+
+/*************************************** keyframe h1 TEXT **********************************************/
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
 
 /*************************************** HEART PULSE **********************************************/
 
@@ -611,34 +634,6 @@ figure img {
     100% {
         opacity: 0.1;
         transform: scale(1);
-    }
-}
-
-@keyframes pulse-last {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    10% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-    20% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    30% {
-        opacity: 1;
-        transform: scale(1.4);
-    }
-    40% {
-        opacity: 0;
-        transform: scale(1.6);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: scale(10);
     }
 }
 
@@ -671,42 +666,106 @@ figure img {
 }
 
 @keyframes pulse-end {
-
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    40% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    60% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    80% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }
 
 
-/*************************************** ANIMATION TEXT **********************************************/
-
-.text-focus-in {
-	-webkit-animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.pulse-end {
+    animation: pulse-end 1s infinite;
 }
 
-@-webkit-keyframes text-focus-in {
+/*************************************** 1 1 3: keyframe **********************************************/
+@keyframes numberchange {
+
     0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
+        content: " ";
+        color: var(--white);
+    }
+    15% {
+        content: "1 ";
+        color: var(--yellow);
+    }
+
+    50% {
+        content: "1 1 ";
+        color: var(--orange);
+        transform: scale(1.1);
+    }
+
+    75% {
+        content: "1 1 3 ";
+        color: var(--red);
+        transform: scale(1.3);
     }
     100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
+        content: "1 1 3 ";
+        color: var(--red);
+        transform: scale(1.5);
     }
-  }
-  @keyframes text-focus-in {
+}
+
+/************************** Keyframe: changing MAIN title *********************/ 
+
+@keyframes titlechange {
+
     0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
+        content: "SKADER";
     }
+    50% {
+        content: "DREPER";
+    }
+
+    75% {
+        content: "UTFORDRER";
+    }
+
     100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
+        content: "DREPER";
     }
-  }
-  
+}
 
 /*********************************************************************************************************/
 /*                                             MEDIA QUERIES                                             */
@@ -714,14 +773,67 @@ figure img {
 
 @media screen and (min-width: 768px) {
 
-header a img {
-    width: 60px;
-}
+    header a img {
+        width: 60px;
+    }
 
-.headline {
-    text-align: center;
-}
-  
+    .headline {
+        text-align: center;
+    }
+
+    .headline-big {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .headline p {
+        font-size: 1.5rem;
+    }
+
+    .main-title h1 {
+        font-size : 2.5rem;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .article-div p {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .article-div p i {
+        font-size: 1.4rem;
+    }
+
+    .amk-melding,
+    .text-box {
+        max-width: 350px;
+        padding: 1rem;
+    }
+
+    .amk-melding img {
+        width: 70px;
+    }
+
+    .amk-text,
+    .text-box p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .dilemma-div {
+        width: min(96%, 600px);
+    }
+    .dilemma {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 2rem;
+    }
+    
 
 }
 

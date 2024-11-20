@@ -105,3 +105,26 @@ document.addEventListener('scroll', function () {
     }
 });
 /* const lastPulse = document.getElementById("lastpulse"); */
+
+
+/* Bytte av bakgrunnsfarge på slutten som skal symbolisere at smerten er på maks og døden inntreffer */
+
+document.addEventListener('scroll', function () {
+    const lastPulse = document.getElementById("last-pulse");
+    const theend = document.getElementById("theend");
+    const theendbuffer = document.getElementById("theend-buffer");
+    const theendtitle = document.getElementById("theend-titlebox");
+
+    if (isPartiallyInViewport(theendbuffer)) {
+        console.log(`Element theend is partially in viewport`);
+        lastPulse.classList.add("red-background");
+        theend.classList.add("red-background");
+        theendbuffer.classList.add("red-background");
+        theendtitle.classList.add("red-background");
+    } else {
+        lastPulse.classList.remove("red-background");
+        theend.classList.remove("red-background");
+        theendbuffer.classList.remove("red-background");
+        theendtitle.classList.remove("red-background");
+    }
+})
