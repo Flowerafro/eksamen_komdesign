@@ -135,16 +135,18 @@ header a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    z-index: 100;
 }
-
 
 /* headlines in intro*/
 
 .headlines {
     width: 100%;
     height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .headline {
@@ -160,14 +162,19 @@ header a img {
     color: var(--white);
     text-align: center;
     letter-spacing: 1px;
-    position: relative;
 }
 
 .headline-big {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     padding: 2rem;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 2rem;
+    height: 100vh;
 
     color: var(--white);
     text-align: center;
@@ -241,6 +248,60 @@ header a img {
     animation: pulse-last 1s infinite;   
 }
 
+/********************************* EKG *********************/
+
+
+
+.intro-block {
+    height: 100vh;
+    width: 100vw;
+}
+
+.intro-block .monitor {
+    padding-top: 50vh;
+    max-width: 500px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.intro-block svg {
+    max-width: 470px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.intro-block svg .ekg {
+    fill: none;
+    stroke: var(--red);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+    opacity: 0;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: ekg 2s linear forwards infinite;
+}
+
+
+@keyframes ekg {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        stroke-dashoffset: 2000;
+    }
+    99% {
+        opacity: 0;
+        stroke-dashoffset: 3000;
+    }
+    100% {
+        stroke-dashoffset: 1000;
+    }
+}
+
 /**************************  MAIN title*********************/ 
 
 .main-title {
@@ -286,7 +347,7 @@ header a img {
     padding-left: 10px;
 }
 
-/**************************************** Pulsteller & liten puls ******************************************************/
+/**************************************** Buffer ******************************************************/
 
 #buffer {
     width: 100%;
@@ -565,7 +626,7 @@ figure img {
     border-radius: 5px;
     outline: none;
 
-    background-color: var(--black);
+    background-color: var(--dark-grey);
     color: var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -779,6 +840,7 @@ figure img {
 
     .headline {
         text-align: center;
+        width: 80%;
     }
 
     .headline-big {
@@ -806,7 +868,7 @@ figure img {
     }
 
     .article-div p i {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .amk-melding,
@@ -833,7 +895,6 @@ figure img {
         line-height: 2rem;
         padding: 2rem;
     }
-    
 
 }
 
@@ -845,7 +906,26 @@ figure img {
 
     header a img:hover {
         background-color: var(--red);
+        transition: 0.5s ease-in-out;
         /* animation: pulse 2s infinite; */
+    }
+
+    .headline, 
+    .headline-big {
+        width: 100%;
+    }
+
+    .article-div {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .article-div p {
+        padding: 1rem;
+    }
+
+    .quote {
+        text-align: center;
     }
   
     .btn-top:hover {
