@@ -36,7 +36,7 @@ function startCounter() {
         if (counter >= maxCount) {
             clearInterval(intervalId);
         }
-    }, 2000);
+    }, 3000);
 }
 
 /* Start counter when scrolling to article-1 */
