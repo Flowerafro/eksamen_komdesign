@@ -166,7 +166,7 @@ basket.addEventListener('click', () => {
                 <h3>${mushroom.name}</h3>
                 <h4 style="color: ${typeColor};">${mushroom.type}</h4>
                 <p>${mushroom.info}</p>
-                <a href=${mushroom.link}>Les mer om soppen her</a>
+                <a href=${mushroom.link} target="_blank">Les mer om soppen her</a>
             </div>`;
         }).join('');
 

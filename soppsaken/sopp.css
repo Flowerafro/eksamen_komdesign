@@ -410,7 +410,7 @@ body {
     }
 
     .article p {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .btn-top {
@@ -462,11 +462,6 @@ body {
         height: auto;
     }
 
-    .mushroom-card:hover {
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
-
     .mushroom-card h3 {
         font-size: 30px;
         margin: 1rem;
@@ -484,22 +479,68 @@ body {
         padding: 1rem;
     }
 
+    .mushroom-card a:hover, .mushroom-card a:focus {
+        color: var(--black);
+        transition: 0.5s;
+    }
+
+
     /* ------------  ARTICLE SECTION  ----------- */
+
+
+    #buffer {
+        height: 50vh;
+    }
 
     #article {
         padding: 4rem;
     }
 
     .article {
-        max-width: 800px;
+        max-width: 700px;
         margin: 2rem auto;
         padding: 3rem;
         line-height: 3rem;
     }
+
+    .article h3 {
+        font-size: 1.7rem;
+        margin: 2rem 0;
+        padding-bottom: 2rem;
+    }
+
+    .article p {
+        font-size: calc(var(--font-size-article) + 0.1rem);
+        letter-spacing: 1px;
+        padding-bottom: 1rem;
+    }
+
+    #plukkevettregler {
+        margin: 0;
+        max-width: 600px;
+    }
+
+    #plukkevettregler p {
+        font-size: 1.4rem;
+    }
+
+    .printbtn-box {
+        justify-content: flex-end;
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+
+    #nyttige-linker a:hover {
+        color: var(--cream);
+        transition: 0.5s;
+    }
+
+
 
     .btn-top:hover {
         background-color: var(--brown);
         transform: translateY(-15px);
         transition: 0.5s;
     }
+
 }

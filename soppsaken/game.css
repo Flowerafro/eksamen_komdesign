@@ -280,9 +280,20 @@ figure figcaption {
         width: 150px;
     }
 
+    #basket-section {
+       display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
     #basket-text {
         width: 70%;
         margin-top: 2rem;
+    }
+
+    #basket-text p {
+        font-size: 25px;
     }
  }
 
@@ -336,9 +347,12 @@ figure figcaption {
     #basket-section {
         padding: 0;
         }
-        #basket {
-            padding: 2rem;
-        }
+
+
+
+    #basket {
+    padding: 2rem;
+    }
 
     #basket-text {
         width: 40%;        
@@ -350,7 +364,6 @@ figure figcaption {
 
     #basket-text p {
         width: 80%;
-        font-size: 30px;
         line-height: 3rem;
         text-align: left;
     }
