@@ -59,15 +59,6 @@ body {
 }
 /************* PARALLAX ***********/
 
-main {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */ 
-
-    width: 100%;
-}
-
 #background {
     background-image: url('images/19.jpg');
     background-attachment: fixed;
@@ -76,6 +67,12 @@ main {
     background-repeat: no-repeat;
     transition: all 1s ease;
 }
+
+/* Kilder bilder: bilder er generert av KI. Adobe, (2023). Adobe Firefly: Fra tekst til bilde (2023 versjon). [Stor språkmodell] https://firefly.adobe.com/
+   Promt brukt: "Students in full auditorium listening to a lecture", "student watching cellphone during lecture", "cellphone lying on desk in busy classroom", "cellphone in hand scrolling"
+   Stilreferanse: "Pencil 6" 
+*/
+
 
 .parallax {
     width: 100%;

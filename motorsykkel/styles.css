@@ -99,6 +99,12 @@ p {
     background-repeat: no-repeat;
 }
 
+/* Kilder bilder til .sticky og .sample-cards: bilder er generert av KI. Adobe, (2023). Adobe Firefly: Fra tekst til bilde (2023 versjon). [Stor språkmodell] https://firefly.adobe.com/
+   Promt brukt: "biker on motorcycle", "highway road horisontal", "cartoon image of road and some trees", "cartoon image of road and some trees at twilight"
+   Stilreferanse: "3D 0"
+   Komposisjon: "IMG/bikerreferance.png" 
+*/
+
 .horizontal {
     position: absolute;
     height: 100%;

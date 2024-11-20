@@ -61,6 +61,10 @@ body {
     background-size: cover;
 }
 
+/*
+Kilde bilde: FOTO av journalist i studentgruppa
+*/
+
 /* -------------INTRO text boxes ----------- */
 #intro {
     width: var(--responsive-width);
@@ -112,7 +116,7 @@ body {
 .intro-text {
     width: 90%;
     font-size: 20px;
-    color: white;
+    color: var(--white);
     letter-spacing: 1px;
     line-height: 3rem;
     font-weight: bold; 
@@ -135,6 +139,8 @@ body {
     margin-bottom: -1rem;
 }
 
+/* Kilde: https://pixabay.com/vectors/trees-forest-silhouette-branches-6863878/ */
+
 .branch-break {
     background-image: url(IMG/branches.png);
     background-attachment: cover;
@@ -146,6 +152,10 @@ body {
     height: 400px;
     margin-bottom: -1rem;
 }
+
+/*
+Kilde: https://pixabay.com/photos/branches-trees-tree-branches-png-2740419/
+*/
     
 /* ---------- Section: mushroom info - der hvor info om soppen du har plukket kommer opp -------------- */
 
@@ -251,6 +261,10 @@ body {
 
     position: relative;
 }
+
+/*
+Kilde bilde: FOTO av journalist i studentgruppa
+*/
 
 .article {
     width: var(--responsive-width);
