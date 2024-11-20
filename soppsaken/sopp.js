@@ -28,6 +28,7 @@ const mushroomData = [
         src: "IMG/fluesopp_hvitkant.png",
         name: "Rød fluesopp",
         info: "Amanita muscaria, er en stilksporesopp av slekten Amanita. Navnet kommer fra dens bruk som insektmiddel. Rød fluesopp er giftig og gir sterke magesmerter og brekninger, og kan dessuten gi hallusinasjoner. Den inneholder ibotensyre, muskimol og muskazon, som aktive prinsipp. ",
+        link: "https://soppognyttevekster.no/normlisten/rod-fluesopp/",
         alt: "fluesopp"
     },
     {
@@ -36,6 +37,7 @@ const mushroomData = [
         src: "IMG/hvitfluesopp_hvitkant.png",
         name: "Hvit fluesopp",
         info: "Amanita virosa, er en av de farligste av våre giftige sopper. Hvit fluesopp inneholder gift som angriper lever og nyrer. Hvit fluesopp kan forveksles med hvite sjampinjonger; men sjampinjonger har mørke sporer som gjør at skivene blir grårosa til svartbrune. ",
+        link: "https://soppognyttevekster.no/normlisten/hvit-fluesopp/",
         alt: "hvitfluesopp"
     },
     {
@@ -44,6 +46,7 @@ const mushroomData = [
         src: "IMG/spissgiftslørsopp_hvitkant.png",
         name: "Spiss Giftslørsopp",
         info: "Cortinarius rubellus,er en sopp som hører til slekten slørsopper. Den er dødelig giftig og angriper nyrene. Forgiftningssymptomene kommer ofte etter 2–3 dager eller mer. ",
+        link: "https://soppognyttevekster.no/normlisten/spiss-giftslorsopp/",
         alt: "spissgiftslorsopp"
     },
     {
@@ -52,6 +55,7 @@ const mushroomData = [
         src: "IMG/flatklokkehatt.png",
         name: "Flatklokkehatt",
         info: "Galerina marginata, er en brun giftsopp som er vanlig i hele landet. Den gir hovedsakelig leverskade og kan være dødelig. ",
+        link: "https://soppognyttevekster.no/normlisten/flatklokkehatt/",
         alt: "flatklokkehatt"
     },
     {
@@ -60,6 +64,7 @@ const mushroomData = [
         src: "IMG/steinsopp_hvitkant.png",
         name: "Steinsopp",
         info: "Boletus edulis, tilhører rørsoppfamilien og regnes som som en av de beste matsoppene. Steinsopp vokser i løv- og barskog, og har sesong i Norge fra juni til september.  ",
+        link: "https://soppognyttevekster.no/normlisten/steinsopp/",
         alt: "steinsopp"
     },
     {
@@ -68,6 +73,7 @@ const mushroomData = [
         src: "IMG/kantarell_hvitkant.png",
         name: "Kantarell",
         info: "Cantharellus cibarius, er en av Norges beste og mest gjenkjennelige matsopper. Den vokser i hele landet og har lang sesong.",
+        link: "https://soppognyttevekster.no/normlisten/kantarell/",
         alt: "kantarell"
     },
     {
@@ -76,14 +82,16 @@ const mushroomData = [
         src: "IMG/ametystsopp_hvitkant.png",
         name: "Ametystsopp",
         info: "Lakssopp eller Laccaria amethystina, Lakssopp er oftest lakserøde til rødfiolette små sopper med tynn stilk og tykke, voksaktige skiver. ",
+        link: "https://soppognyttevekster.no/normlisten/ametystsopp/",
         alt: "ametystsopp"
     },
     {
         id: 8,
         type: "Ikke-giftig",
         src: "IMG/matpiggsopp.png",
-        name: "Matpiggsopp",
+        name: "Blek piggsopp",
         info: "Hydnum repandum, er hattsopper som danner sporer på et piggete hymenofor. Matpiggsoppene er, som navnet forteller, gode matsopper. ",
+        link: "https://soppognyttevekster.no/normlisten/blek-piggsopp/",
         alt: "mat-sopp"
     },
 ];
@@ -144,7 +152,6 @@ function getMushroomData(basketContent) {
 }
 
 /* Klikk på soppkurven skal vise: innholdet i kurven og artikkel, feilmeld om kurven er tom, og fjerne spillet (da er spillet over)*/
-/* Klikk på soppkurven skal vise: innholdet i kurven og artikkel, feilmeld om kurven er tom, og fjerne spillet (da er spillet over)*/
 basket.addEventListener('click', () => {
     if (basketContent.length === 0) {
         alert('ops! Ser ut som at du må tilbake til skogs og plukke sopp før vi kan sjekke kurven din!');
@@ -152,12 +159,14 @@ basket.addEventListener('click', () => {
     } else {
         infoSection.classList.add('info-section');
         mushroomInfo.innerHTML = getMushroomData(basketContent).map(mushroom => {
+            const typeColor = mushroom.type === 'Giftig' ? 'red' : 'green';
             return `
             <div class="mushroom">
                 <img src="${mushroom.src}" alt="${mushroom.alt}">
                 <h3>${mushroom.name}</h3>
-                <h4>${mushroom.type}</h4>
+                <h4 style="color: ${typeColor};">${mushroom.type}</h4>
                 <p>${mushroom.info}</p>
+                <a href=${mushroom.link}>Les mer om soppen her</a>
             </div>`;
         }).join('');
 
@@ -175,7 +184,7 @@ basket.addEventListener('click', () => {
 
         setTimeout(() => {
             infoSection.classList.add('show');
-        }, 100); /* delay */
+        }, 100);
     }
 });
 
@@ -200,3 +209,14 @@ function displayScore() {
         <button><a href="#info-section">Les mer om soppen du plukket her</a></button>`;
     }
 }
+
+/* Funksjon for å printe ut Plukkvettreglene */
+
+document.getElementById("print-btn").addEventListener("click", function () {
+    const printContent = document.getElementById("plukkevettregler").innerHTML;
+    const originalContent = document.body.innerHTML;
+
+    document.body.innerHTML = printContent;
+    window.print();
+    document.body.innerHTML = originalContent;
+})
