@@ -48,6 +48,22 @@ body {
     background-color: var(--black);
 }
 
+header {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin: 0;
+    padding: 0.7rem;
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--green);
+}
+
 /*********************************************
  *   MOBILE Styling
  *********************************************/
@@ -405,6 +421,11 @@ Kilde bilde: FOTO av journalist i studentgruppa
 
 
 @media (min-width: 768px) {
+
+    header img {
+        width: 70px;
+    }
+
     #intro h1 {
         width: 70%;
     } 
@@ -437,6 +458,16 @@ Kilde bilde: FOTO av journalist i studentgruppa
  *  Desktop Styling (min-width: 1000px)
  *********************************************/
 @media (min-width: 1000px) {
+
+    header img {
+        width: 80px;
+    }
+
+    header img:hover {
+        background-color: var(--dark-red);
+        trasition: 0.5s;
+    }
+
     #intro {
         width: var(--responsive-width);
         height: var(--100vh);

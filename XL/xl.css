@@ -69,17 +69,17 @@ header {
     top: 0;
     z-index: 1000;
 }
-.logo {
-    display: inline-flex;
-    align-items: center;
-    background: var(--white);
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1.2em;
 
-    margin-right: 1rem;
-    padding: 1rem;
+header a img {
+    z-index: 1001;
+    background-color: var(--white);
+    width: 50px;
+    height: auto;
+    padding: 0.7rem;
+    margin: 0.5rem;
+    border-radius: 5px 0 5px 0;
 }
+
 
 .counter-box {
     width: 100%;
@@ -673,6 +673,10 @@ figure img {
 
 @media screen and (min-width: 768px) {
 
+header a img {
+    width: 60px;
+}
+
 .headline {
     text-align: center;
 }
@@ -682,6 +686,14 @@ figure img {
 
 @media screen and (min-width: 1024px) {
 
+    header a img {
+        width: 70px;
+    }
+
+    header a img:hover {
+        background-color: var(--red);
+        /* animation: pulse 2s infinite; */
+    }
   
     .btn-top:hover {
         background-color: green;

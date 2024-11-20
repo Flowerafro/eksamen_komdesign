@@ -57,6 +57,22 @@ body {
     background: var(--white);
     color: var(--black);
 }
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin: 0;
+    padding: 0.7rem;
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--white);
+}
 /************* PARALLAX ***********/
 
 #background {
@@ -282,6 +298,11 @@ footer {
  *********************************************/
 
 @media (min-width: 768px) {
+
+    header img {
+        width: 70px;
+    }
+
     .text-box {
         padding: 2rem;
         max-width: 600px;
@@ -294,6 +315,16 @@ footer {
  *********************************************/
 
 @media screen and (min-width: 1000px) {
+
+    header img {
+        width: 80px;
+    }
+
+    header img:hover {
+        background-color: var(--grey-green);
+        trasition: 0.5s;
+    }
+
     .text-container {
         padding: 1rem;
         width: min(60%, 1200px);

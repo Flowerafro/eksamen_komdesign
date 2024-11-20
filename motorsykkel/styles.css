@@ -51,8 +51,20 @@ body {
 }
 
 header {
-   width: 100%;
-   height: auto;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin: 0.5rem;
+    padding: 0.7rem;
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--black);
+    z-index: 100;
 }
 
 #back-btn {
@@ -307,6 +319,11 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+    header img {
+        width: 70px;
+    }
+
     .interview {
         margin: 5rem 0;
     }
@@ -317,6 +334,15 @@ footer {
 }
 
   @media screen and (min-width: 1000px) {
+
+    header img {
+        width: 80px;
+    }
+
+    header img:hover {
+        background-color: var(--grey-green);
+        trasition: 0.5s;
+    }
 
     .btn-top:hover {
         background-color: var(--white);

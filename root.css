@@ -48,25 +48,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* ------------  Header all pages  ----------- */
-
-header {
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    position: relative;
-}
-
-.logo {
-    position: absolute;
-    background: var(--green);
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.2em;
-
-    margin-right: 1rem;
-    padding: 1rem;
-}
 
 
 /* ------------ FLEX RULES ----------- */
