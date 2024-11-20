@@ -224,6 +224,11 @@ figcaption {
     align-self: center;
 }
 
+.article figure a {
+    text-decoration: none;
+    color: var(--white);
+}
+
 .article figure img {
     width: 100%;
     height: auto;
@@ -242,4 +247,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media screen and (min-width: 1000px) {
+
   }

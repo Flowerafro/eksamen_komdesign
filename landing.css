@@ -33,8 +33,8 @@ body {
 .logo-landing {
     display: inline-flex;
     align-items: center;
-    background: #459677;
-    color: #fff;
+    background: var(--green);
+    color: var(--white);
     text-decoration: none;
     font-size: 1.2em;
 
@@ -57,6 +57,7 @@ body {
     width: 100%;
     max-width: 900px;
     padding: 0;
+    margin: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -64,10 +65,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    color: white;
+    background-color: var(--yellow);
+    color: var(--black);
+    letter-spacing: 1px;
+    font-weight: 600;
     padding: 10px;
-    width: 210px;
+    width: 250px;
 }
 
 .news-scroll {
@@ -81,12 +84,12 @@ body {
     letter-spacing: 1px;
     display: inline-block;
     white-space: nowrap;
-    animation: scroll 15s linear infinite;
+    animation: scroll 16s linear infinite;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(20%);
     }
     100% {
         transform: translateX(-100%);
@@ -105,7 +108,7 @@ body {
     margin-left: 3px;
     margin-right: 3px;
     margin-top: 2px !important;
-    background-color: rgb(207, 23, 23);
+    background-color: var(--black);
     border-radius: 50%;
     display: inline-block;
     padding: 5px;
@@ -188,10 +191,9 @@ figure img {
 }
 
 .news-box {
-    background-color: #fff;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: var(--white);
     padding: 6px;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 
     display: flex;
     align-items: left;
@@ -222,11 +224,18 @@ figure img {
 }
 
 .story-header h3 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
+}
+
+.story-header h4 {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    width: 80%;
 }
 
 .story-header p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 /************** FOOTER ************/
@@ -251,12 +260,13 @@ footer {
  *********************************************/
 
  @media (min-width: 768px) {
-    header {
+    .header-landing {
         font-size: 1.1rem;
         line-height: 4rem;
+        justify-content: flex-start;
     }
 
-    header a {
+    .header-landing a {
         font-size: 1.3em;
         margin-right: 1.5rem;
         padding: 0 1.2rem;
@@ -269,10 +279,6 @@ footer {
 
     .top-story-wrap {
         padding: 10px;
-    }
-
-    figure img {
-       
     }
 
     #top-story-header {
@@ -301,7 +307,6 @@ footer {
     .news-box {
         flex-direction: row;
         align-items: center;
-        margin-bottom: 1rem;
         width: 100%;
     }
 
@@ -320,7 +325,6 @@ footer {
     }
 
     .story-header {
-        width: 50%;
         text-align: left;
     }
     
@@ -361,6 +365,10 @@ footer {
         /* har med seg en max-bredde 900px fra ipad */
     }
 
+    .scrolling-text a:hover {
+        font-weight: 700;
+    }
+
     #top-story-image {
         max-width: 900px;
         max-height: 600px;
@@ -371,6 +379,10 @@ footer {
     }
 
     .story-header h3:hover {
+        text-decoration: underline;
+    }
+
+    .story-header h4:hover {
         text-decoration: underline;
     }
 
