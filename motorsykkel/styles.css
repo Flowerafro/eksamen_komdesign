@@ -278,6 +278,7 @@ figcaption {
 
 .article figure img {
     width: 100%;
+    max-width: 400px;
     height: auto;
     object-fit: cover;
 }
@@ -322,6 +323,23 @@ footer {
 
     header img {
         width: 70px;
+    }
+
+    .article {
+        max-width: 600px;
+    }
+
+    .article figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article figure figcaption {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1rem;
     }
 
     .interview {

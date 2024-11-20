@@ -41,12 +41,19 @@ function startCounter() {
 
 /* Start counter when scrolling to article-1 */
 document.addEventListener('scroll', function () {
-    const article1 = document.getElementById("article-1");
-    const rect = article1.getBoundingClientRect();
-    const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+    const articles = document.querySelectorAll(".article");
+    let isAnyArticleInViewport = false;
 
-    if (inViewport && !intervalId) {
-        console.log(`Article ${article1.id} is in viewport`);
+    articles.forEach(article => {
+        const rect = article.getBoundingClientRect();
+        const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+        if (inViewport) {
+            isAnyArticleInViewport = true;
+        }
+    });
+    if (isAnyArticleInViewport && !intervalId) {
+        console.log(`At least one article is in viewport`);
         startCounter();
     }
 });

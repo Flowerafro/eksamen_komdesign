@@ -252,9 +252,9 @@ header a img {
 
 
 
-.intro-block {
+/* .intro-block {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .intro-block .monitor {
@@ -300,7 +300,7 @@ header a img {
     100% {
         stroke-dashoffset: 1000;
     }
-}
+} */
 
 /**************************  MAIN title*********************/ 
 
@@ -339,6 +339,12 @@ header a img {
     background-color: red !important;
 }
 
+.red-underline {
+    border-bottom: 2px solid var(--red);
+    width: 80%;
+    margin: 0 auto;
+}
+
 .h1-title::before {
     content: "DREPER";
     animation-name: titlechange;
@@ -356,6 +362,9 @@ header a img {
 }
 
 /**************************************** ARTICLE ******************************************************/
+
+
+
 .article {
     width: 100%;
     height: auto; 
@@ -832,6 +841,10 @@ figure img {
 /*                                             MEDIA QUERIES                                             */
 /*********************************************************************************************************/
 
+/*********************************************
+ *  iPad Styling (min-width: 768px)
+ *********************************************/
+
 @media screen and (min-width: 768px) {
 
     header a img {
@@ -895,8 +908,11 @@ figure img {
         line-height: 2rem;
         padding: 2rem;
     }
-
 }
+
+/*********************************************
+ *  Desktop Styling (min-width: 1000px)
+ *********************************************/
 
 @media screen and (min-width: 1024px) {
 
@@ -912,7 +928,12 @@ figure img {
 
     .headline, 
     .headline-big {
-        width: 100%;
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .enentre {
+        font-size: 2rem;
     }
 
     .article-div {
@@ -927,7 +948,7 @@ figure img {
     .quote {
         text-align: center;
     }
-  
+
     .btn-top:hover {
         background-color: green;
         transform: translateY(-15px);
