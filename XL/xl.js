@@ -33,6 +33,15 @@ function startCounter() {
         document.getElementById("counter").innerText = counter;
         console.log(counter);
 
+        if (counter < 80) {
+            document.getElementById("counter").style.color = "white";
+        } else if (counter < 110 && counter >= 80) {
+            document.getElementById("counter").style.color = "yellow";
+        } else if (counter < 160 && counter >= 110) {
+            document.getElementById("counter").style.color = "orange";
+        } else {
+            document.getElementById("counter").style.color = "red";
+        }
         if (counter >= maxCount) {
             clearInterval(intervalId);
         }
