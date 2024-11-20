@@ -7,7 +7,6 @@
     --grey: #39454b;
     --light-grey: #f1f1f1;
     --yellow: #ffdd00;
-    /*motorsykkel*/
     /*mobil-debatten*/
     --white: #fff;
     --white-opacity: rgba(255, 255, 255, 0.8);
@@ -150,3 +149,5 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
+  

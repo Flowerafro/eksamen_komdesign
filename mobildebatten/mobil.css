@@ -4,6 +4,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
 
+:root {
+      --green: #459677;
+      --grey: #39454b;
+      --light-grey: #f1f1f1;
+      --yellow: #ffdd00;
+      --white: #fff;
+      --white-opacity: rgba(255, 255, 255, 0.8);
+      --black: #000;
+      --black-opacity: rgba(0, 0, 0, 0.8);
+      
+      --grey-green: #A3C1AD;
+      --light-yellow: #f4f0dc;
+
+      --responsive-width: min(96%, 1400px);
+  
+      --100vh: 100vh;
+      --50vh: 50vh;
+  
+      --dark-green: #2E8B57;
+      --light-green: #98FB98;
+      --brown: #8B4513;
+      --beige: #F5F5DC;
+      --dark-red: #8B0000;
+      --cream: #FFFDD0;
+      --dark-gray-green: #2F4F4F;
+  
+      --font-size-header: clamp(1.5rem, 2rem + 1vw, 2rem);
+      --font-size-header-small: clamp(1.25rem, 1rem + 1vw, 1.5rem); 
+      --font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem); 
+      --font-size-article: clamp(0.875rem, 0.75rem + 0.5vw, 1rem); 
+}
+
 * {
     box-sizing: border-box;
 }
