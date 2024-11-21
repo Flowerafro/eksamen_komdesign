@@ -42,6 +42,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 html,
@@ -556,6 +557,49 @@ figure img {
     color: var(--white);
 }
 
+/******************************** Lillehammer sykehusene: image slider ********************************************/
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-image {
+    min-width: 100%;
+    height: auto;
+}
+
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.gallery-button img {
+    width: 30px;
+    height: auto;
+}
+
+.gallery-button.prev {
+    left: 10px;
+}
+
+.gallery-button.next {
+    right: 10px;
+}
 
 /**************************************** VIDEO in article ******************************************************/
 
@@ -908,6 +952,8 @@ figure img {
         line-height: 2rem;
         padding: 2rem;
     }
+
+    
 }
 
 /*********************************************
