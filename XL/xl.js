@@ -124,7 +124,6 @@ document.addEventListener('scroll', function () {
 
 
 /* Bytte av bakgrunnsfarge på slutten som skal symbolisere at smerten er på maks og døden inntreffer */
-
 document.addEventListener('scroll', function () {
     const lastPulse = document.getElementById("last-pulse");
     const theend = document.getElementById("theend");
