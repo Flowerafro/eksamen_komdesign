@@ -486,7 +486,7 @@ Kilde bilde: FOTO av journalist i studentgruppa
     }
 
     .forest-break {
-        height: 700px;
+        min-height: 800px;
         margin-bottom: -1rem;
     }
 
@@ -579,8 +579,6 @@ Kilde bilde: FOTO av journalist i studentgruppa
         color: var(--cream);
         transition: 0.5s;
     }
-
-
 
     .btn-top:hover {
         background-color: var(--brown);

@@ -48,7 +48,6 @@ figure figcaption {
     color: var(--white);
     line-height: 2rem;
     padding: 0 1.125rem;
-    width: 70%;
     margin: 1rem;
 }
 
@@ -259,6 +258,7 @@ figure figcaption {
 
  @media (min-width: 768px) {
 
+
     .mushroom-path-text {
         font-size: 20px;
         line-height: 3rem;
@@ -306,11 +306,11 @@ figure figcaption {
  @media (min-width: 1000px) {
     .mushroom-path-intro {
         padding-bottom: 10rem;
+        width: 100%;
+    max-width: 800px;
     }
 
-    .mushroom-path-text {
-        width: 70%;
-    }
+ 
 
     #data-image {
         width: 800px;

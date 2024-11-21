@@ -52,7 +52,7 @@ const mushroomData = [
     {
         id: 4,
         type: "Giftig",
-        src: "IMG/flatklokkehatt.png",
+        src: "IMG/flatklokkehatt_hvitkant.png",
         name: "Flatklokkehatt",
         info: "Galerina marginata, er en brun giftsopp som er vanlig i hele landet. Den gir hovedsakelig leverskade og kan være dødelig. ",
         link: "https://soppognyttevekster.no/normlisten/flatklokkehatt/",
@@ -88,7 +88,7 @@ const mushroomData = [
     {
         id: 8,
         type: "Ikke-giftig",
-        src: "IMG/matpiggsopp.png",
+        src: "IMG/piggsopp_hvitkant.png",
         name: "Blek piggsopp",
         info: "Hydnum repandum, er hattsopper som danner sporer på et piggete hymenofor. Matpiggsoppene er, som navnet forteller, gode matsopper. ",
         link: "https://soppognyttevekster.no/normlisten/blek-piggsopp/",
