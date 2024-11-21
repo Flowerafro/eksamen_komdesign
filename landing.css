@@ -46,9 +46,10 @@ body {
 
 /************* breaking news banner **************/ 
 .news-container {
-    margin: 10px 0;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .breaking-news {
@@ -57,9 +58,9 @@ body {
     align-items: center;
     background-color: var(--light-grey);
     width: 100%;
-    max-width: 900px;
+ /*    max-width: 900px; */
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -387,7 +388,6 @@ footer {
     .story-header h4:hover {
         text-decoration: underline;
     }
-
 
     .story-header h3 {
         font-size: 1.5rem;
