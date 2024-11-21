@@ -341,7 +341,13 @@ Kilde bilde: FOTO av journalist i studentgruppa
     list-style: none;
     font-weight: bold;
     font-size: 1.3rem;
-} 
+}
+
+#plukkevettregler li:nth-child(5) {
+    font-weight: bold;
+    list-style: none;
+    padding-top: 1rem;
+}
 
 .article strong {
     font-weight: bold;
@@ -367,6 +373,7 @@ Kilde bilde: FOTO av journalist i studentgruppa
 
 #nyttige-linker li {
     padding: 2px;
+    font-size: 1.1rem;
     margin-left: 1rem;
 }
 
