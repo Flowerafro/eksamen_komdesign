@@ -59,8 +59,9 @@ header {
 header img {
     width: 50px;
     height: auto;
-    margin: 0.5rem;
     padding: 0.7rem;
+    top: 0;
+    left: 0;
     position: absolute;
     border-radius: 5px;
     background-color: var(--black);
@@ -85,6 +86,7 @@ p {
     line-height: 2rem;
 }
 
+
 .container {
     position: relative;
     width: 100%;
@@ -108,7 +110,7 @@ p {
     background-image: url(IMG/road4.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
 
 /* Kilder bilder til .sticky og .sample-cards: bilder er generert av KI. Adobe, (2023). Adobe Firefly: Fra tekst til bilde (2023 versjon). [Stor språkmodell] https://firefly.adobe.com/
@@ -323,6 +325,7 @@ footer {
 
     header img {
         width: 70px;
+        left: -3rem;
     }
 
     .article {
@@ -349,12 +352,23 @@ footer {
         bottom: 6rem;
         right: 0;
     }
+
+    .sample-card {
+        margin-right: 120px;
+    }
 }
 
   @media screen and (min-width: 1000px) {
 
+    body {
+        max-width: 1000px;
+    }
+
     header img {
         width: 80px;
+        top: 0.5rem;
+        left: 0.5rem;
+
     }
 
     header img:hover {
@@ -367,6 +381,10 @@ footer {
         color: var(--green);
         transform: translateY(-15px);
         transition: 0.5s;
+    }
+
+    .sample-card {
+        margin-right: 400px;
     }
 
   }
