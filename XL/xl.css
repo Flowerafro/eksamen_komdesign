@@ -367,6 +367,10 @@ header a img {
     letter-spacing: 1px;
 }
 
+.article-div a {
+    color: var(--yellow);
+}
+
 figure {
     display: grid;
     grid-template-columns: 2% 1fr 2%;
@@ -940,6 +944,10 @@ figure img {
 
     .article-div p {
         padding: 1rem;
+    }
+
+    .article-div a:hover {
+        color: var(--orange);
     }
 
     .quote {
